@@ -9,7 +9,7 @@
 <style>
 html,body{background:#fbf5e3!important;color:#1a0a02!important}
 *{box-sizing:border-box;margin:0;padding:0}
- 
+
 /* Default vars (traditional) */
 :root{
   --bg:#fbf5e3;
@@ -38,7 +38,7 @@ html,body{background:#fbf5e3!important;color:#1a0a02!important}
   --header-text:#fff;
   --header-accent:#e8c870;
 }
- 
+
 /* NEON THEME — applied via body.theme-neon */
 body.theme-neon{
   --bg:#0a0420;
@@ -67,7 +67,7 @@ body.theme-neon{
   --header-text:#fff;
   --header-accent:#fff000;
 }
- 
+
 body{
   background:var(--bg);
   color:var(--ink);
@@ -78,12 +78,12 @@ body{
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
   transition:background-color .5s,color .5s;
 }
- 
+
 body.theme-neon{
   background:linear-gradient(180deg,#0a0420 0%,#1a0a3a 50%,#0a0420 100%);
   background-attachment:fixed;
 }
- 
+
 body.theme-neon::before{
   content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
   background-image:
@@ -91,12 +91,12 @@ body.theme-neon::before{
     linear-gradient(90deg, transparent 50%, rgba(0,240,255,.03) 50%);
   background-size:3px 3px;
 }
- 
+
 body:not(.theme-neon)::after{
   content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
   background:radial-gradient(ellipse at 50% 50%,transparent 70%,rgba(139,80,40,.08) 100%);
 }
- 
+
 /* ── HEADER ──────────────────────────────────── */
 .hdr{
   padding:1rem 1.5rem .9rem;
@@ -110,16 +110,16 @@ body:not(.theme-neon)::after{
   color:var(--header-text);
   transition:background .5s,border-color .5s;
 }
- 
+
 body.theme-neon .hdr{
   border-top-color:var(--gold);
   border-bottom-color:var(--gold);
   box-shadow:0 0 20px rgba(255,42,138,.4);
 }
- 
+
 .hdr-left{display:flex;align-items:center;gap:14px;flex:1;min-width:200px}
 .hdr-decoration{flex-shrink:0;filter:drop-shadow(0 2px 3px rgba(0,0,0,.3))}
- 
+
 .hdr-title{flex:1}
 .hdr-title .jp-title{
   font-size:11px;
@@ -138,7 +138,7 @@ body.theme-neon .hdr{
 }
 .hdr-title .main-title em{color:var(--header-accent);font-style:normal}
 .hdr-meta{font-size:11px;color:rgba(255,255,255,.95);margin-top:5px;letter-spacing:.02em;font-weight:500}
- 
+
 /* Theme toggle button */
 .theme-tag{
   position:absolute;
@@ -155,7 +155,7 @@ body.theme-neon .hdr{
   z-index:51;
 }
 body.theme-neon .theme-tag{background:#fff000;color:#0a0420;text-shadow:none}
- 
+
 /* ── PROGRESS ────────────────────────────────── */
 .global-prog{text-align:right;background:rgba(0,0,0,.25);padding:6px 11px;border:1.5px solid var(--ink);border-radius:5px}
 .prog-lbl{font-size:9px;color:#fff;letter-spacing:.08em;margin-bottom:5px;font-weight:700;text-transform:uppercase}
@@ -166,7 +166,7 @@ body.theme-neon .theme-tag{background:#fff000;color:#0a0420;text-shadow:none}
 .prog-pcts{display:flex;gap:8px;justify-content:flex-end}
 .prog-pct{font-size:11px;font-weight:700}
 .prog-pct.g{color:#a8ff80}.prog-pct.r{color:#ffb0c0}
- 
+
 /* ── IO BUTTONS ──────────────────────────────── */
 .io-btn{
   padding:5px 12px;
@@ -181,7 +181,7 @@ body.theme-neon .theme-tag{background:#fff000;color:#0a0420;text-shadow:none}
   box-shadow:2px 2px 0 var(--ink);
 }
 .io-btn:hover{transform:translate(-1px,-1px);box-shadow:3px 3px 0 var(--ink)}
- 
+
 /* ── PHASE NAV ───────────────────────────────── */
 .phase-nav{
   display:flex;border-bottom:2px solid var(--border);
@@ -205,7 +205,7 @@ body.theme-neon .phase-nav{box-shadow:0 0 15px rgba(160,64,255,.3)}
 .ph-btn:hover{color:var(--ink)}
 .ph-btn.on{color:var(--vermilion);border-bottom-color:var(--vermilion);background:rgba(168,50,50,.05)}
 body.theme-neon .ph-btn.on{background:rgba(255,42,138,.15);text-shadow:0 0 6px var(--vermilion)}
- 
+
 /* ── WEEK NAV ────────────────────────────────── */
 .wk-nav{
   padding:.6rem 1.5rem;
@@ -228,7 +228,7 @@ body.theme-neon .ph-btn.on{background:rgba(255,42,138,.15);text-shadow:0 0 6px v
 /* Mark style differences */
 .wk-btn.style-neon{border-style:dashed;border-color:#a040ff}
 .wk-btn.style-trad{border-style:solid;border-color:#8b6a3a}
- 
+
 .wk-btn:hover{transform:translate(-1px,-1px);box-shadow:2px 2px 0 var(--ink)}
 .wk-btn.on{border-width:2.5px;border-color:var(--vermilion);color:var(--vermilion);background:rgba(168,50,50,.1);font-weight:700}
 body.theme-neon .wk-btn.on{box-shadow:0 0 10px var(--vermilion);text-shadow:0 0 4px var(--vermilion)}
@@ -236,7 +236,7 @@ body.theme-neon .wk-btn.on{box-shadow:0 0 10px var(--vermilion);text-shadow:0 0 
 .wk-btn::after{content:"";position:absolute;bottom:2px;right:2px;width:5px;height:5px;border-radius:50%;display:none}
 .wk-btn.all-done::after{display:block;background:var(--green)}
 .wk-btn.partial::after{display:block;background:var(--gold2)}
- 
+
 /* ── KM TOTALS ───────────────────────────────── */
 .km-totals{
   position:sticky;top:155px;z-index:25;
@@ -255,10 +255,10 @@ body.theme-neon .km-totals{box-shadow:0 0 15px rgba(255,42,138,.4)}
 .km-total-num{font-size:13px;font-weight:800;text-shadow:1px 1px 0 var(--ink);letter-spacing:.02em}
 .km-total-unit{font-size:10px;opacity:.85;font-weight:600}
 @media(max-width:600px){.km-totals{top:150px;gap:6px}.km-totals-title{font-size:10px;flex-basis:100%}}
- 
+
 /* ── MAIN ────────────────────────────────────── */
 .main{padding:1.2rem 1.5rem;max-width:880px;position:relative;z-index:1}
- 
+
 /* ── WEEK HEADER ─────────────────────────────── */
 .wk-hdr{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:.5rem}
 .wk-title-block{display:flex;align-items:flex-start;gap:14px;flex:1}
@@ -270,7 +270,7 @@ body.theme-neon .wk-num-kanji .w-num{text-shadow:0 0 15px var(--vermilion),0 0 3
 .wk-dates-txt{font-size:12px;color:var(--muted2);margin-top:6px;font-weight:500}
 .wk-desc{font-size:14px;color:var(--ink);margin-top:6px;line-height:1.5;font-weight:400}
 .wk-mascot{flex-shrink:0;margin-top:8px}
- 
+
 /* Theme tag in week header */
 .style-badge{
   display:inline-block;
@@ -284,7 +284,7 @@ body.theme-neon .wk-num-kanji .w-num{text-shadow:0 0 15px var(--vermilion),0 0 3
 }
 .style-badge.trad{background:var(--gold3);color:var(--bronze);border-style:solid}
 .style-badge.neon{background:transparent;color:var(--vermilion);border-style:dashed;text-shadow:0 0 6px currentColor}
- 
+
 /* Badges */
 .badge{
   font-size:10px;padding:4px 11px;font-weight:700;
@@ -298,7 +298,7 @@ body.theme-neon .wk-num-kanji .w-num{text-shadow:0 0 15px var(--vermilion),0 0 3
 .badge-int{color:var(--vermilion);border-color:var(--vermilion)}
 .badge-taper{color:var(--ink2);border-color:var(--ink2)}
 body.theme-neon .badge{box-shadow:0 0 8px currentColor;background:rgba(0,0,0,.4)}
- 
+
 /* ── STATS ───────────────────────────────────── */
 .wk-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(95px,1fr));gap:6px;margin-bottom:1rem}
 .stat{background:var(--paper);border:1.5px solid var(--border);border-top:3px solid var(--gold2);padding:8px 12px;box-shadow:2px 2px 0 var(--ink)}
@@ -308,7 +308,7 @@ body.theme-neon .stat{border-color:var(--bronze);border-top-color:var(--gold);bo
 .stat-unit{font-size:10px;color:var(--muted);font-weight:500}
 .stat.green-stat .stat-val{color:var(--green)}
 .stat.red-stat .stat-val{color:var(--vermilion)}
- 
+
 /* ── PROGRESS BARS ───────────────────────────── */
 .wk-prog{display:flex;gap:6px;margin-bottom:1rem;align-items:center}
 .wk-prog-bar{flex:1;height:6px;background:var(--bg4);border:1.5px solid var(--ink);overflow:hidden}
@@ -316,11 +316,11 @@ body.theme-neon .stat{border-color:var(--bronze);border-top-color:var(--gold);bo
 .wk-prog-fill-r{height:100%;background:var(--vermilion);transition:width .4s}
 .wk-prog-lbl{font-size:12px;font-weight:700;min-width:36px;text-align:center}
 .wk-prog-lbl.g{color:var(--green)}.wk-prog-lbl.r{color:var(--vermilion)}
- 
+
 /* ── DONE BANNER ─────────────────────────────── */
 .done-banner{display:none;background:var(--green);color:#fff;border:2px solid var(--ink);padding:11px 16px;text-align:center;margin-bottom:1rem;font-size:13px;font-weight:700;letter-spacing:.04em;box-shadow:3px 3px 0 var(--ink)}
 .done-banner.show{display:block}
- 
+
 /* ── SESSIONS ────────────────────────────────── */
 .sessions{display:flex;flex-direction:column;gap:7px;margin-bottom:1.25rem}
 .sess{border:1.5px solid var(--border);border-left:5px solid var(--border);background:var(--paper);overflow:hidden;transition:all .15s;box-shadow:2px 2px 0 var(--ink)}
@@ -337,7 +337,7 @@ body.theme-neon .sess{border-color:var(--bronze);background:rgba(26,10,58,.6);bo
 .sess.completed .sess-name{color:var(--green)}
 .sess.skipped .sess-name{color:var(--vermilion);text-decoration:line-through;opacity:.7}
 .sess-pace{font-size:12px;color:var(--muted);margin-top:3px;font-weight:400}
- 
+
 /* ── CHECK BUTTONS ───────────────────────────── */
 .chk-wrap{display:flex;gap:7px;flex-shrink:0;align-items:flex-start}
 .chk-cell{display:flex;flex-direction:column;align-items:center;gap:2px}
@@ -353,13 +353,14 @@ body.theme-neon .sess{border-color:var(--bronze);background:rgba(26,10,58,.6);bo
 .sess.skipped .chk-skip+.chk-lbl{color:var(--vermilion);font-weight:800}
 .chk-locked{opacity:.4;cursor:not-allowed!important}
 .lock-tag{font-size:13px;margin-right:2px;opacity:.55;flex-shrink:0;margin-top:6px}
- 
+
 /* ── KM TRACKING ─────────────────────────────── */
 .km-track{display:flex;align-items:center;gap:7px;padding:8px 12px;margin:0 12px 10px;background:var(--paper-soft);border:1.5px solid var(--border);border-radius:4px;flex-wrap:wrap}
 body.theme-neon .km-track{border-color:var(--bronze);background:rgba(160,64,255,.08)}
 .km-track-lbl{font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-right:auto}
 .km-input{width:60px;padding:4px 6px;border:1.5px solid var(--ink);border-radius:3px;background:var(--paper);color:var(--ink);font-size:13px;font-weight:700;text-align:center;font-family:inherit}
 .km-input:focus{outline:none;border-color:var(--vermilion);box-shadow:0 0 0 2px rgba(168,50,50,.2)}
+.km-input:disabled{background:var(--bg3);opacity:.6;cursor:not-allowed}
 .km-mode{display:flex;border:1.5px solid var(--ink);border-radius:3px;overflow:hidden}
 .km-mode-btn{padding:4px 10px;border:none;background:var(--paper);color:var(--muted);font-size:10px;font-weight:700;text-transform:uppercase;cursor:pointer;letter-spacing:.04em}
 .km-mode-btn:not(:last-child){border-right:1.5px solid var(--ink)}
@@ -368,7 +369,7 @@ body.theme-neon .km-track{border-color:var(--bronze);background:rgba(160,64,255,
 .km-unit{font-size:11px;color:var(--muted);font-weight:600}
 .km-save{padding:4px 10px;border:1.5px solid var(--ink);background:var(--gold2);color:var(--ink);font-size:10px;font-weight:700;text-transform:uppercase;cursor:pointer;border-radius:3px;letter-spacing:.04em}
 .km-save:hover{background:var(--vermilion);color:#fff}
- 
+
 /* ── EXPANDABLE ──────────────────────────────── */
 .expand{padding:0 12px 10px}
 .exp-block{border:1.5px solid var(--border);border-left:3px solid;padding:9px 11px;margin-bottom:5px;background:var(--paper-soft)}
@@ -383,7 +384,7 @@ body.theme-neon .exp-block{background:rgba(26,10,58,.7);border-color:var(--bronz
 .exp-step{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--ink);line-height:1.5;font-weight:400}
 .exp-num{width:18px;height:18px;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;border-radius:50%}
 .warm-n{background:var(--vermilion);color:#fff}.cool-n{background:var(--gold);color:#fff}
- 
+
 /* ── FUERZA ──────────────────────────────────── */
 .prog-phase-lbl{font-size:10px;color:var(--gold);border:1.5px solid var(--gold);padding:3px 8px;display:inline-block;margin-bottom:7px;letter-spacing:.04em;font-weight:600;background:var(--paper)}
 body.theme-neon .prog-phase-lbl{background:rgba(160,64,255,.1)}
@@ -397,7 +398,7 @@ body.theme-neon .fsvg{background:rgba(0,0,0,.3)}
 .fweight{font-size:10px;color:var(--gold);font-weight:600;margin-bottom:2px}
 .fdesc{font-size:10px;color:var(--muted2);line-height:1.3;font-weight:400}
 .frest{font-size:9px;color:var(--muted);margin-top:3px;border-top:1px dashed var(--border);padding-top:3px;font-weight:500}
- 
+
 /* ── RACE BANNER ─────────────────────────────── */
 .race-banner{background:linear-gradient(135deg,var(--vermilion),var(--crimson));border:3px solid var(--ink);padding:1.5rem;text-align:center;margin-bottom:1rem;position:relative;box-shadow:4px 4px 0 var(--ink)}
 body.theme-neon .race-banner{background:linear-gradient(135deg,#ff2a8a,#a040ff);box-shadow:0 0 30px rgba(255,42,138,.6),4px 4px 0 var(--ink)}
@@ -407,7 +408,7 @@ body.theme-neon .race-banner{background:linear-gradient(135deg,#ff2a8a,#a040ff);
 .race-jp{font-size:.9rem;color:var(--gold3);letter-spacing:.12em;margin-top:5px;display:block;font-weight:600;text-shadow:1px 1px 0 var(--ink);position:relative;z-index:1}
 .race-goal{font-size:1.2rem;color:#fff;font-weight:800;margin-top:12px;text-shadow:2px 2px 0 var(--ink);position:relative;z-index:1}
 .race-sub{font-size:12px;color:#fff;margin-top:5px;font-weight:500;text-shadow:1px 1px 0 var(--ink);position:relative;z-index:1}
- 
+
 /* ── NAV BUTTONS ─────────────────────────────── */
 .nav-btns{display:flex;gap:10px;margin-top:1rem;align-items:center;justify-content:space-between}
 .nav-btn{padding:9px 18px;border:2px solid var(--ink);background:var(--paper);color:var(--ink);font-size:12px;letter-spacing:.04em;cursor:pointer;transition:all .15s;font-weight:600;text-transform:uppercase;box-shadow:2px 2px 0 var(--ink);border-radius:3px}
@@ -416,13 +417,13 @@ body.theme-neon .nav-btn{background:rgba(160,64,255,.2);color:var(--gold3)}
 .nav-btn:disabled{opacity:.35;cursor:default}
 .nav-btn:disabled:hover{transform:none;box-shadow:2px 2px 0 var(--ink);background:var(--paper);color:var(--ink)}
 body.theme-neon .nav-btn:disabled:hover{background:rgba(160,64,255,.2);color:var(--gold3)}
- 
+
 .wave-foot{margin:2rem 0 1rem;display:flex;justify-content:center;opacity:.75}
- 
+
 /* ── TOAST ───────────────────────────────────── */
 .toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;border:2px solid var(--ink);padding:10px 20px;font-size:12px;letter-spacing:.04em;z-index:9999;opacity:0;transition:opacity .3s;pointer-events:none;font-weight:600;box-shadow:3px 3px 0 var(--vermilion);border-radius:3px}
 .toast.show{opacity:1}
- 
+
 /* ── CELEBRATION ─────────────────────────────── */
 .celebration{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9998;pointer-events:none;opacity:0;transition:opacity .3s}
 .celebration.show{opacity:1;pointer-events:all}
@@ -433,7 +434,7 @@ body.theme-neon .celebration-bg{background:rgba(10,4,32,.85)}
 .confetti-wrap{position:absolute;inset:0;overflow:hidden;pointer-events:none}
 .confetti-piece{position:absolute;top:-20px;animation:confettiFall linear forwards}
 @keyframes confettiFall{0%{transform:translateY(0) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}
- 
+
 /* ── DOOR ANIMATION ──────────────────────────── */
 .door-overlay{position:fixed;inset:0;z-index:9990;pointer-events:none;display:none;overflow:hidden}
 .door-l,.door-r{position:absolute;top:0;bottom:0;width:52%;overflow:hidden}
@@ -449,15 +450,52 @@ body.theme-neon .celebration-bg{background:rgba(10,4,32,.85)}
 .door-scan{position:fixed;left:0;right:0;height:6px;top:-2%;z-index:9995;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(168,50,50,.7),rgba(26,10,2,.8),rgba(168,50,50,.7),transparent);opacity:0;filter:blur(1px)}
 .door-scan.active{animation:sweep .95s ease-in-out forwards}
 body.theme-neon .door-scan{background:linear-gradient(90deg,transparent,#ff2a8a,#00f0ff,#ff2a8a,transparent);box-shadow:0 0 20px #ff2a8a}
- 
+
 @media(max-width:600px){
   .hdr,.phase-nav,.wk-nav,.main{padding-left:1rem;padding-right:1rem}
   .phase-nav{top:75px}.wk-nav{top:114px}
 }
+
+/* Test week marker */
+.wk-btn.wk-test{border-color:var(--gold2)!important;color:var(--gold)!important}
+.wk-btn.wk-test.on{background:var(--gold2)!important;color:var(--ink)!important}
+.test-dot{position:absolute;top:2px;right:2px;width:6px;height:6px;border-radius:50%;background:var(--gold);border:1px solid var(--ink)}
+body.theme-neon .test-dot{background:#fff000;box-shadow:0 0 4px #fff000}
+
+/* Test week banner */
+.test-banner{
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
+  color:var(--ink);
+  border:2px solid var(--ink);
+  padding:12px 16px;
+  margin-bottom:1rem;
+  box-shadow:3px 3px 0 var(--ink);
+  border-radius:4px;
+}
+.test-banner-title{font-size:14px;font-weight:800;margin-bottom:4px;letter-spacing:.02em}
+.test-banner-sub{font-size:12px;font-weight:500;line-height:1.5;opacity:.85}
+body.theme-neon .test-banner{background:linear-gradient(135deg,#fff000,#ffd040);box-shadow:0 0 15px rgba(255,208,0,.4),3px 3px 0 var(--ink)}
+
+/* Skip protocol box */
+.skip-box{
+  background:var(--paper-soft);
+  border:1.5px solid var(--border);
+  border-left:4px solid var(--bronze);
+  padding:10px 12px;
+  margin-bottom:1rem;
+  border-radius:3px;
+  font-size:12px;
+  color:var(--ink);
+  line-height:1.6;
+  font-weight:400;
+}
+.skip-box strong{font-weight:700;color:var(--vermilion)}
+body.theme-neon .skip-box{background:rgba(160,64,255,.08);border-color:var(--bronze)}
+
 </style>
 </head>
 <body style="background:#fbf5e3!important;color:#1a0a02!important">
- 
+
 <div class="hdr">
   <span class="theme-tag" id="themeTag">伝統 TRADITIONAL</span>
   <div class="hdr-left">
@@ -487,7 +525,7 @@ body.theme-neon .door-scan{background:linear-gradient(90deg,transparent,#ff2a8a,
     </div>
   </div>
 </div>
- 
+
 <div class="phase-nav" id="phNav"></div>
 <div class="wk-nav" id="wkNav"></div>
 <div class="km-totals" id="kmTotals">
@@ -497,26 +535,2336 @@ body.theme-neon .door-scan{background:linear-gradient(90deg,transparent,#ff2a8a,
   <div class="km-total-item"><span class="km-total-icon">合計</span><span class="km-total-num" id="kmGrandTotal">0</span><span class="km-total-unit">km total</span></div>
 </div>
 <div class="main" id="main"></div>
- 
+
 <div class="celebration" id="celebration" onclick="closeCelebration()">
   <div class="celebration-bg"></div>
   <div class="confetti-wrap" id="confettiWrap"></div>
   <div class="celebration-emoji" id="celebEmoji"></div>
 </div>
- 
+
 <div class="door-overlay" id="doorOverlay" style="display:none">
   <div class="door-l" id="doorL"></div>
   <div class="door-r" id="doorR"></div>
 </div>
 <div class="door-scan" id="doorScan"></div>
- 
+
 <script>
 var SVGS = {"Sentadilla búlgara": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.sa{animation:sa 1.8s ease-in-out infinite}@keyframes sa{0%,100%{transform:translateY(0)}50%{transform:translateY(9px)}}</style><rect x=\"50\" y=\"60\" width=\"24\" height=\"4\" rx=\"1.5\" fill=\"#1a1a2e\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><line x1=\"52\" y1=\"64\" x2=\"52\" y2=\"74\" stroke=\"#3a3a5a\" stroke-width=\"1.5\"/><line x1=\"72\" y1=\"64\" x2=\"72\" y2=\"74\" stroke=\"#3a3a5a\" stroke-width=\"1.5\"/><line x1=\"2\" y1=\"74\" x2=\"78\" y2=\"74\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><g class=\"sa\"><circle cx=\"24\" cy=\"10\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"24\" y1=\"16\" x2=\"24\" y2=\"38\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"10\" y1=\"22\" x2=\"38\" y2=\"22\" stroke=\"#a78bfa\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"10\" cy=\"22\" r=\"3\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.5\"/><circle cx=\"38\" cy=\"22\" r=\"3\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.5\"/><line x1=\"16\" y1=\"22\" x2=\"16\" y2=\"30\" stroke=\"#a78bfa\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><line x1=\"32\" y1=\"22\" x2=\"32\" y2=\"30\" stroke=\"#a78bfa\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><line x1=\"22\" y1=\"38\" x2=\"14\" y2=\"55\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"14\" y1=\"55\" x2=\"10\" y2=\"73\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"7\" y1=\"73\" x2=\"16\" y2=\"73\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"26\" y1=\"38\" x2=\"40\" y2=\"52\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"52\" x2=\"56\" y2=\"60\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/></g></svg>", "Flexiones": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.fx{animation:fx 1.4s ease-in-out infinite}@keyframes fx{0%,100%{transform:translateY(0)}40%,60%{transform:translateY(10px)}}</style><line x1=\"2\" y1=\"76\" x2=\"78\" y2=\"76\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><g class=\"fx\"><circle cx=\"10\" cy=\"38\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"16\" y1=\"40\" x2=\"62\" y2=\"44\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"22\" y1=\"41\" x2=\"20\" y2=\"55\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"20\" y1=\"55\" x2=\"28\" y2=\"57\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"38\" y1=\"43\" x2=\"36\" y2=\"57\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"36\" y1=\"57\" x2=\"44\" y2=\"58\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"58\" y1=\"44\" x2=\"60\" y2=\"72\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"64\" y1=\"44\" x2=\"66\" y2=\"72\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"57\" y1=\"72\" x2=\"64\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"63\" y1=\"72\" x2=\"70\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></g></svg>", "Hip thrust en suelo": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.ht{animation:ht 1.4s ease-in-out infinite}@keyframes ht{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}</style><line x1=\"2\" y1=\"76\" x2=\"78\" y2=\"76\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><circle cx=\"10\" cy=\"66\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"16\" y1=\"68\" x2=\"34\" y2=\"66\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"18\" y1=\"67\" x2=\"18\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><line x1=\"28\" y1=\"66\" x2=\"28\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><g class=\"ht\"><circle cx=\"34\" cy=\"60\" r=\"3.5\" fill=\"#a78bfa\" opacity=\"0.4\"/><line x1=\"34\" y1=\"60\" x2=\"50\" y2=\"52\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"50\" y1=\"52\" x2=\"56\" y2=\"72\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"53\" y1=\"72\" x2=\"62\" y2=\"72\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><rect x=\"28\" y=\"52\" width=\"12\" height=\"6\" rx=\"2\" fill=\"#2a1a3a\" stroke=\"#a78bfa\" stroke-width=\"1\"/><text x=\"34\" y=\"57\" text-anchor=\"middle\" fill=\"#a78bfa\" font-size=\"5\">kg</text></g></svg>", "Remo con mochila": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.rm{animation:rm 1.4s ease-in-out infinite}@keyframes rm{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}</style><line x1=\"2\" y1=\"74\" x2=\"78\" y2=\"74\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><rect x=\"8\" y=\"48\" width=\"22\" height=\"4\" rx=\"1.5\" fill=\"#1a1a2e\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><line x1=\"10\" y1=\"52\" x2=\"10\" y2=\"70\" stroke=\"#3a3a5a\" stroke-width=\"1.2\"/><line x1=\"28\" y1=\"52\" x2=\"28\" y2=\"70\" stroke=\"#3a3a5a\" stroke-width=\"1.2\"/><circle cx=\"58\" cy=\"22\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"54\" y1=\"28\" x2=\"30\" y2=\"44\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"38\" y1=\"38\" x2=\"20\" y2=\"48\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"32\" y1=\"44\" x2=\"22\" y2=\"48\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"34\" y1=\"46\" x2=\"42\" y2=\"64\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"42\" y1=\"64\" x2=\"42\" y2=\"72\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"38\" y1=\"72\" x2=\"48\" y2=\"72\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><g class=\"rm\" style=\"transform-origin:48px 32px\"><line x1=\"48\" y1=\"32\" x2=\"60\" y2=\"26\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"60\" y1=\"26\" x2=\"66\" y2=\"34\" stroke=\"#a78bfa\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><rect x=\"62\" y=\"18\" width=\"11\" height=\"9\" rx=\"2\" fill=\"#1a1a2e\" stroke=\"#a78bfa\" stroke-width=\"1.2\"/><line x1=\"64\" y1=\"18\" x2=\"64\" y2=\"14\" stroke=\"#a78bfa\" stroke-width=\"1\"/><line x1=\"70\" y1=\"18\" x2=\"70\" y2=\"14\" stroke=\"#a78bfa\" stroke-width=\"1\"/></g></svg>", "Zancada con giro": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.zg{animation:zg 1.8s ease-in-out infinite}@keyframes zg{0%,100%{transform:rotate(-25deg)}50%{transform:rotate(25deg)}}</style><line x1=\"2\" y1=\"76\" x2=\"78\" y2=\"76\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><circle cx=\"38\" cy=\"10\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"38\" y1=\"16\" x2=\"38\" y2=\"40\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><g class=\"zg\" style=\"transform-origin:38px 28px\"><line x1=\"38\" y1=\"28\" x2=\"18\" y2=\"28\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"38\" y1=\"28\" x2=\"58\" y2=\"28\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><circle cx=\"18\" cy=\"28\" r=\"2.5\" fill=\"#a78bfa\" opacity=\"0.6\"/><circle cx=\"58\" cy=\"28\" r=\"2.5\" fill=\"#a78bfa\" opacity=\"0.6\"/></g><line x1=\"36\" y1=\"40\" x2=\"24\" y2=\"56\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"24\" y1=\"56\" x2=\"18\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"14\" y1=\"74\" x2=\"24\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"40\" x2=\"54\" y2=\"54\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"54\" y1=\"54\" x2=\"58\" y2=\"72\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"54\" y1=\"72\" x2=\"64\" y2=\"72\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>", "Burpee": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.bu1{animation:bu1 2s ease-in-out infinite}@keyframes bu1{0%,20%{opacity:1}30%,100%{opacity:0}}.bu2{animation:bu2 2s ease-in-out infinite}@keyframes bu2{0%,25%{opacity:0}30%,55%{opacity:1}60%,100%{opacity:0}}.bu3{animation:bu3 2s ease-in-out infinite}@keyframes bu3{0%,60%{opacity:0}65%,88%{opacity:1}95%,100%{opacity:0}}</style><line x1=\"2\" y1=\"76\" x2=\"78\" y2=\"76\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><g class=\"bu1\"><circle cx=\"40\" cy=\"12\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"44\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"26\" x2=\"28\" y2=\"36\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"26\" x2=\"52\" y2=\"36\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"38\" y1=\"44\" x2=\"32\" y2=\"62\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"42\" y1=\"44\" x2=\"48\" y2=\"62\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"28\" y1=\"62\" x2=\"36\" y2=\"62\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"44\" y1=\"62\" x2=\"52\" y2=\"62\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/></g><g class=\"bu2\"><circle cx=\"10\" cy=\"44\" r=\"5.5\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"15\" y1=\"46\" x2=\"58\" y2=\"50\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"22\" y1=\"47\" x2=\"20\" y2=\"60\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"20\" y1=\"60\" x2=\"28\" y2=\"60\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"36\" y1=\"49\" x2=\"34\" y2=\"62\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"34\" y1=\"62\" x2=\"42\" y2=\"62\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"54\" y1=\"50\" x2=\"56\" y2=\"72\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"60\" y1=\"50\" x2=\"62\" y2=\"72\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/></g><g class=\"bu3\"><circle cx=\"40\" cy=\"8\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"40\" y1=\"14\" x2=\"40\" y2=\"38\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"20\" x2=\"24\" y2=\"10\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"20\" x2=\"56\" y2=\"10\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"38\" y1=\"38\" x2=\"32\" y2=\"52\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"42\" y1=\"38\" x2=\"48\" y2=\"52\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/></g></svg>", "Puente glúteo unilateral": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.pg{animation:pg 1.6s ease-in-out infinite}@keyframes pg{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}</style><line x1=\"2\" y1=\"76\" x2=\"78\" y2=\"76\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><circle cx=\"10\" cy=\"62\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"16\" y1=\"64\" x2=\"34\" y2=\"66\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"18\" y1=\"65\" x2=\"18\" y2=\"73\" stroke=\"#a78bfa\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><line x1=\"28\" y1=\"66\" x2=\"28\" y2=\"73\" stroke=\"#a78bfa\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><g class=\"pg\"><circle cx=\"34\" cy=\"64\" r=\"3.5\" fill=\"#a78bfa\" opacity=\"0.45\"/><line x1=\"34\" y1=\"64\" x2=\"50\" y2=\"56\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"50\" y1=\"56\" x2=\"58\" y2=\"70\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"54\" y1=\"70\" x2=\"64\" y2=\"70\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"34\" y1=\"64\" x2=\"46\" y2=\"48\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"46\" y1=\"48\" x2=\"56\" y2=\"42\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></g></svg>", "Pike push-up": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.pp{animation:pp 1.4s ease-in-out infinite}@keyframes pp{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}</style><line x1=\"2\" y1=\"76\" x2=\"78\" y2=\"76\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><circle cx=\"40\" cy=\"22\" r=\"3\" fill=\"#a78bfa\" opacity=\"0.4\"/><line x1=\"40\" y1=\"22\" x2=\"18\" y2=\"48\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"22\" x2=\"62\" y2=\"48\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"58\" y1=\"48\" x2=\"60\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"64\" y1=\"48\" x2=\"66\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"56\" y1=\"74\" x2=\"64\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"62\" y1=\"74\" x2=\"70\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><g class=\"pp\"><line x1=\"18\" y1=\"48\" x2=\"14\" y2=\"64\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"14\" y1=\"64\" x2=\"22\" y2=\"66\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"26\" y1=\"50\" x2=\"22\" y2=\"64\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"22\" y1=\"64\" x2=\"30\" y2=\"65\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><circle cx=\"10\" cy=\"56\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/></g></svg>", "Dead bug": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.da{animation:da 2.2s ease-in-out infinite}@keyframes da{0%,100%{transform:rotate(-50deg)}50%{transform:rotate(10deg)}}.dl{animation:dl 2.2s ease-in-out infinite}@keyframes dl{0%,100%{transform:rotate(40deg)}50%{transform:rotate(-15deg)}}</style><line x1=\"2\" y1=\"52\" x2=\"78\" y2=\"52\" stroke=\"#3a3a5a\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/><circle cx=\"10\" cy=\"36\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"16\" y1=\"36\" x2=\"56\" y2=\"36\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"24\" y1=\"34\" x2=\"22\" y2=\"18\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><g class=\"da\" style=\"transform-origin:40px 34px\"><line x1=\"40\" y1=\"34\" x2=\"50\" y2=\"16\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></g><line x1=\"52\" y1=\"36\" x2=\"56\" y2=\"50\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"56\" y1=\"50\" x2=\"56\" y2=\"62\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><g class=\"dl\" style=\"transform-origin:38px 37px\"><line x1=\"38\" y1=\"37\" x2=\"36\" y2=\"54\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"36\" y1=\"54\" x2=\"32\" y2=\"66\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/></g></svg>", "Superman": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.sm{animation:sm 1.8s ease-in-out infinite}@keyframes sm{0%,100%{transform:translateY(2px)}50%{transform:translateY(-8px)}}</style><line x1=\"2\" y1=\"62\" x2=\"78\" y2=\"62\" stroke=\"#3a3a5a\" stroke-width=\"1\" stroke-dasharray=\"4,3\"/><line x1=\"22\" y1=\"50\" x2=\"58\" y2=\"50\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><g class=\"sm\"><circle cx=\"10\" cy=\"46\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"16\" y1=\"48\" x2=\"22\" y2=\"50\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"20\" y1=\"48\" x2=\"6\" y2=\"38\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"24\" y1=\"47\" x2=\"12\" y2=\"36\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"56\" y1=\"50\" x2=\"68\" y2=\"42\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"60\" y1=\"51\" x2=\"72\" y2=\"44\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/></g></svg>", "Plancha lateral": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.pl{animation:pl 2s ease-in-out infinite}@keyframes pl{0%,100%{transform:translateY(5px)}50%{transform:translateY(-5px)}}</style><line x1=\"2\" y1=\"76\" x2=\"78\" y2=\"76\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><circle cx=\"10\" cy=\"44\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><g class=\"pl\"><line x1=\"16\" y1=\"48\" x2=\"58\" y2=\"56\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"18\" y1=\"49\" x2=\"16\" y2=\"62\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"16\" y1=\"62\" x2=\"26\" y2=\"64\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"22\" y1=\"47\" x2=\"26\" y2=\"34\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"54\" y1=\"56\" x2=\"62\" y2=\"72\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"58\" y1=\"57\" x2=\"66\" y2=\"72\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"59\" y1=\"72\" x2=\"68\" y2=\"72\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/></g></svg>", "Mountain climber": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.mc1{animation:mc1 0.7s ease-in-out infinite}@keyframes mc1{0%,100%{transform:translateX(0) translateY(0)}50%{transform:translateX(8px) translateY(-10px)}}</style><line x1=\"2\" y1=\"72\" x2=\"78\" y2=\"72\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><circle cx=\"8\" cy=\"36\" r=\"5.5\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"13\" y1=\"38\" x2=\"56\" y2=\"44\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"20\" y1=\"40\" x2=\"18\" y2=\"54\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"18\" y1=\"54\" x2=\"26\" y2=\"55\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"34\" y1=\"42\" x2=\"32\" y2=\"56\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"32\" y1=\"56\" x2=\"40\" y2=\"57\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"52\" y1=\"44\" x2=\"58\" y2=\"68\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"55\" y1=\"68\" x2=\"63\" y2=\"70\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><g class=\"mc1\" style=\"transform-origin:52px 44px\"><line x1=\"52\" y1=\"44\" x2=\"44\" y2=\"56\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"44\" y1=\"56\" x2=\"40\" y2=\"64\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/></g></svg>", "Sentadilla sumo": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.ss{animation:ss 1.6s ease-in-out infinite}@keyframes ss{0%,100%{transform:translateY(0)}50%{transform:translateY(12px)}}</style><line x1=\"2\" y1=\"76\" x2=\"78\" y2=\"76\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><g class=\"ss\"><circle cx=\"40\" cy=\"10\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"40\" y1=\"16\" x2=\"40\" y2=\"42\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"26\" x2=\"28\" y2=\"38\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"26\" x2=\"52\" y2=\"38\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"28\" y1=\"38\" x2=\"34\" y2=\"44\" stroke=\"#a78bfa\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><line x1=\"52\" y1=\"38\" x2=\"46\" y2=\"44\" stroke=\"#a78bfa\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><line x1=\"37\" y1=\"42\" x2=\"16\" y2=\"56\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"16\" y1=\"56\" x2=\"10\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"6\" y1=\"74\" x2=\"18\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"43\" y1=\"42\" x2=\"64\" y2=\"56\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"64\" y1=\"56\" x2=\"70\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"62\" y1=\"74\" x2=\"74\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/></g></svg>", "Remo invertido en mesa": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.ri{animation:ri 1.4s ease-in-out infinite}@keyframes ri{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}</style><rect x=\"4\" y=\"26\" width=\"72\" height=\"5\" rx=\"2\" fill=\"#1a1a2e\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><line x1=\"8\" y1=\"31\" x2=\"8\" y2=\"52\" stroke=\"#3a3a5a\" stroke-width=\"1.5\"/><line x1=\"72\" y1=\"31\" x2=\"72\" y2=\"52\" stroke=\"#3a3a5a\" stroke-width=\"1.5\"/><g class=\"ri\"><circle cx=\"40\" cy=\"48\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"40\" y1=\"54\" x2=\"40\" y2=\"70\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"37\" y1=\"70\" x2=\"32\" y2=\"80\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"43\" y1=\"70\" x2=\"48\" y2=\"80\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"28\" y1=\"80\" x2=\"36\" y2=\"80\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"44\" y1=\"80\" x2=\"52\" y2=\"80\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"36\" y1=\"46\" x2=\"22\" y2=\"34\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"44\" y1=\"46\" x2=\"58\" y2=\"34\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><circle cx=\"22\" cy=\"31\" r=\"2.5\" fill=\"#a78bfa\" opacity=\"0.6\"/><circle cx=\"58\" cy=\"31\" r=\"2.5\" fill=\"#a78bfa\" opacity=\"0.6\"/></g></svg>", "Zancada reversa": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.zr{animation:zr 1.8s ease-in-out infinite}@keyframes zr{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}</style><line x1=\"2\" y1=\"76\" x2=\"78\" y2=\"76\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><g class=\"zr\"><circle cx=\"34\" cy=\"10\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"34\" y1=\"16\" x2=\"34\" y2=\"42\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"34\" y1=\"28\" x2=\"22\" y2=\"34\" stroke=\"#a78bfa\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><line x1=\"34\" y1=\"28\" x2=\"46\" y2=\"34\" stroke=\"#a78bfa\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><line x1=\"32\" y1=\"42\" x2=\"24\" y2=\"58\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"24\" y1=\"58\" x2=\"20\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"16\" y1=\"74\" x2=\"26\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"36\" y1=\"42\" x2=\"54\" y2=\"54\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"54\" y1=\"54\" x2=\"58\" y2=\"72\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><circle cx=\"58\" cy=\"75\" r=\"3\" fill=\"#a78bfa\" opacity=\"0.4\"/></g></svg>", "Dips en silla": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.dp{animation:dp 1.4s ease-in-out infinite}@keyframes dp{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}</style><line x1=\"2\" y1=\"76\" x2=\"78\" y2=\"76\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><rect x=\"8\" y=\"40\" width=\"22\" height=\"4\" rx=\"1.5\" fill=\"#1a1a2e\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><line x1=\"10\" y1=\"44\" x2=\"10\" y2=\"66\" stroke=\"#3a3a5a\" stroke-width=\"1.5\"/><line x1=\"28\" y1=\"44\" x2=\"28\" y2=\"66\" stroke=\"#3a3a5a\" stroke-width=\"1.5\"/><rect x=\"8\" y=\"28\" width=\"22\" height=\"13\" rx=\"1\" fill=\"none\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><g class=\"dp\"><circle cx=\"42\" cy=\"18\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"42\" y1=\"24\" x2=\"42\" y2=\"50\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"38\" y1=\"30\" x2=\"26\" y2=\"40\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"26\" y1=\"40\" x2=\"20\" y2=\"40\" stroke=\"#a78bfa\" stroke-width=\"1.5\" stroke-linecap=\"round\"/><line x1=\"46\" y1=\"30\" x2=\"52\" y2=\"36\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"50\" x2=\"30\" y2=\"68\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"44\" y1=\"50\" x2=\"56\" y2=\"68\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"26\" y1=\"68\" x2=\"34\" y2=\"68\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"52\" y1=\"68\" x2=\"62\" y2=\"68\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/></g></svg>", "Elevación de talones": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.et{animation:et 1.2s ease-in-out infinite}@keyframes et{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}.ef{animation:ef 1.2s ease-in-out infinite}@keyframes ef{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-20deg)}}</style><line x1=\"2\" y1=\"76\" x2=\"78\" y2=\"76\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><rect x=\"24\" y=\"68\" width=\"32\" height=\"6\" rx=\"1.5\" fill=\"#1a1a2e\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><line x1=\"68\" y1=\"20\" x2=\"68\" y2=\"54\" stroke=\"#3a3a5a\" stroke-width=\"1.5\"/><g class=\"et\"><circle cx=\"40\" cy=\"12\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"44\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"28\" x2=\"28\" y2=\"36\" stroke=\"#a78bfa\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"28\" x2=\"58\" y2=\"34\" stroke=\"#a78bfa\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><circle cx=\"64\" cy=\"34\" r=\"2\" fill=\"#a78bfa\" opacity=\"0.5\"/><line x1=\"58\" y1=\"34\" x2=\"64\" y2=\"34\" stroke=\"#a78bfa\" stroke-width=\"1.3\" stroke-linecap=\"round\"/><line x1=\"38\" y1=\"44\" x2=\"34\" y2=\"62\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"42\" y1=\"44\" x2=\"46\" y2=\"62\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/></g><g class=\"ef\" style=\"transform-origin:34px 62px\"><line x1=\"34\" y1=\"62\" x2=\"28\" y2=\"68\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"34\" y1=\"62\" x2=\"38\" y2=\"66\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/></g><g class=\"ef\" style=\"transform-origin:46px 62px\"><line x1=\"46\" y1=\"62\" x2=\"40\" y2=\"68\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"46\" y1=\"62\" x2=\"50\" y2=\"66\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/></g></svg>", "Saltos al cajón": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.scu{animation:scu 1.8s ease-in-out infinite}@keyframes scu{0%,40%{opacity:1}50%,100%{opacity:0}}.sct{animation:sct 1.8s ease-in-out infinite}@keyframes sct{0%,40%{opacity:0}50%,90%{opacity:1}100%{opacity:0}}</style><line x1=\"2\" y1=\"76\" x2=\"78\" y2=\"76\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><rect x=\"26\" y=\"54\" width=\"30\" height=\"22\" rx=\"2\" fill=\"#1a1a2e\" stroke=\"#3a3a5a\" stroke-width=\"1.2\"/><g class=\"scu\"><circle cx=\"16\" cy=\"16\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"16\" y1=\"22\" x2=\"16\" y2=\"48\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"16\" y1=\"30\" x2=\"6\" y2=\"40\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"16\" y1=\"30\" x2=\"24\" y2=\"38\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"14\" y1=\"48\" x2=\"10\" y2=\"64\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"18\" y1=\"48\" x2=\"22\" y2=\"64\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"6\" y1=\"64\" x2=\"15\" y2=\"64\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"18\" y1=\"64\" x2=\"27\" y2=\"64\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/></g><g class=\"sct\"><circle cx=\"40\" cy=\"12\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"42\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"26\" x2=\"28\" y2=\"14\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"26\" x2=\"52\" y2=\"14\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"38\" y1=\"42\" x2=\"34\" y2=\"54\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"42\" y1=\"42\" x2=\"46\" y2=\"54\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"30\" y1=\"54\" x2=\"38\" y2=\"54\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"42\" y1=\"54\" x2=\"50\" y2=\"54\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/></g></svg>", "Sentadilla con salto": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.sqd{animation:sqd 1.4s ease-in-out infinite}@keyframes sqd{0%,40%{opacity:1}55%,100%{opacity:0}}.squ{animation:squ 1.4s ease-in-out infinite}@keyframes squ{0%,45%{opacity:0}55%,88%{opacity:1}95%,100%{opacity:0}}</style><line x1=\"2\" y1=\"76\" x2=\"78\" y2=\"76\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><g class=\"sqd\"><circle cx=\"40\" cy=\"26\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"40\" y1=\"32\" x2=\"40\" y2=\"52\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"40\" x2=\"22\" y2=\"44\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"40\" x2=\"58\" y2=\"44\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"38\" y1=\"52\" x2=\"26\" y2=\"64\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"26\" y1=\"64\" x2=\"22\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"42\" y1=\"52\" x2=\"54\" y2=\"64\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"54\" y1=\"64\" x2=\"58\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"18\" y1=\"74\" x2=\"28\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"54\" y1=\"74\" x2=\"64\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/></g><g class=\"squ\"><circle cx=\"40\" cy=\"8\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"40\" y1=\"14\" x2=\"40\" y2=\"38\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"22\" x2=\"26\" y2=\"12\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"22\" x2=\"54\" y2=\"12\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"38\" y1=\"38\" x2=\"32\" y2=\"54\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"42\" y1=\"38\" x2=\"48\" y2=\"54\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/></g></svg>", "Flexiones con pausa": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.fp{animation:fp 2.2s ease-in-out infinite}@keyframes fp{0%,15%{transform:translateY(0)}30%,60%{transform:translateY(12px)}75%,100%{transform:translateY(0)}}</style><line x1=\"2\" y1=\"76\" x2=\"78\" y2=\"76\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><text x=\"28\" y=\"18\" font-family=\"monospace\" font-size=\"9\" fill=\"#e8ff47\" opacity=\"0.7\">pausa 2s</text><g class=\"fp\"><circle cx=\"8\" cy=\"36\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"14\" y1=\"38\" x2=\"60\" y2=\"44\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"20\" y1=\"40\" x2=\"16\" y2=\"54\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"16\" y1=\"54\" x2=\"24\" y2=\"56\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"36\" y1=\"42\" x2=\"32\" y2=\"56\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"32\" y1=\"56\" x2=\"40\" y2=\"57\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"56\" y1=\"44\" x2=\"58\" y2=\"70\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"62\" y1=\"44\" x2=\"64\" y2=\"70\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"55\" y1=\"70\" x2=\"63\" y2=\"72\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"61\" y1=\"70\" x2=\"69\" y2=\"72\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/></g></svg>", "Step-up a silla": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.su{animation:su 1.6s ease-in-out infinite}@keyframes su{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}</style><line x1=\"2\" y1=\"76\" x2=\"78\" y2=\"76\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><rect x=\"32\" y=\"52\" width=\"32\" height=\"5\" rx=\"1.5\" fill=\"#1a1a2e\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><line x1=\"34\" y1=\"57\" x2=\"34\" y2=\"72\" stroke=\"#3a3a5a\" stroke-width=\"1.5\"/><line x1=\"62\" y1=\"57\" x2=\"62\" y2=\"72\" stroke=\"#3a3a5a\" stroke-width=\"1.5\"/><g class=\"su\"><circle cx=\"38\" cy=\"12\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"38\" y1=\"18\" x2=\"38\" y2=\"44\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"38\" y1=\"30\" x2=\"24\" y2=\"38\" stroke=\"#a78bfa\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><line x1=\"38\" y1=\"30\" x2=\"52\" y2=\"38\" stroke=\"#a78bfa\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><line x1=\"40\" y1=\"44\" x2=\"50\" y2=\"52\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"47\" y1=\"52\" x2=\"56\" y2=\"52\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"36\" y1=\"44\" x2=\"26\" y2=\"52\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"26\" y1=\"52\" x2=\"20\" y2=\"44\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/></g></svg>", "Plancha con toque hombro": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.pt{animation:pt 1.4s ease-in-out infinite}@keyframes pt{0%,100%{transform:rotate(0deg)}50%{transform:rotate(-40deg)}}</style><line x1=\"2\" y1=\"70\" x2=\"78\" y2=\"70\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><circle cx=\"8\" cy=\"44\" r=\"5.5\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"13\" y1=\"46\" x2=\"56\" y2=\"50\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"52\" y1=\"50\" x2=\"54\" y2=\"66\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"58\" y1=\"50\" x2=\"60\" y2=\"66\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"50\" y1=\"66\" x2=\"58\" y2=\"66\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"57\" y1=\"66\" x2=\"64\" y2=\"66\" stroke=\"#a78bfa\" stroke-width=\"2\" stroke-linecap=\"round\"/><line x1=\"34\" y1=\"49\" x2=\"32\" y2=\"62\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"32\" y1=\"62\" x2=\"40\" y2=\"62\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"20\" y1=\"47\" x2=\"18\" y2=\"60\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><line x1=\"18\" y1=\"60\" x2=\"26\" y2=\"60\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><g class=\"pt\" style=\"transform-origin:34px 49px\"><line x1=\"34\" y1=\"49\" x2=\"24\" y2=\"42\" stroke=\"#a78bfa\" stroke-width=\"1.8\" stroke-linecap=\"round\"/><circle cx=\"20\" cy=\"40\" r=\"2.5\" fill=\"#a78bfa\" opacity=\"0.7\"/></g></svg>", "Reverse lunge con rodilla arriba": "<svg viewBox=\"0 0 80 88\" xmlns=\"http://www.w3.org/2000/svg\"><style>.rll{animation:rll 2s ease-in-out infinite}@keyframes rll{0%,40%{opacity:1}50%,100%{opacity:0}}.rlk{animation:rlk 2s ease-in-out infinite}@keyframes rlk{0%,45%{opacity:0}55%,90%{opacity:1}100%{opacity:0}}</style><line x1=\"2\" y1=\"76\" x2=\"78\" y2=\"76\" stroke=\"#3a3a5a\" stroke-width=\"1\"/><circle cx=\"34\" cy=\"10\" r=\"6\" fill=\"none\" stroke=\"#a78bfa\" stroke-width=\"1.8\"/><line x1=\"34\" y1=\"16\" x2=\"34\" y2=\"42\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"34\" y1=\"28\" x2=\"20\" y2=\"34\" stroke=\"#a78bfa\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><line x1=\"34\" y1=\"28\" x2=\"48\" y2=\"34\" stroke=\"#a78bfa\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><g class=\"rll\"><line x1=\"32\" y1=\"42\" x2=\"24\" y2=\"58\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"24\" y1=\"58\" x2=\"20\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"16\" y1=\"74\" x2=\"26\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"36\" y1=\"42\" x2=\"54\" y2=\"54\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"54\" y1=\"54\" x2=\"58\" y2=\"72\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><circle cx=\"58\" cy=\"75\" r=\"3\" fill=\"#a78bfa\" opacity=\"0.35\"/></g><g class=\"rlk\"><line x1=\"32\" y1=\"42\" x2=\"28\" y2=\"60\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"28\" y1=\"60\" x2=\"24\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"20\" y1=\"74\" x2=\"30\" y2=\"74\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"36\" y1=\"42\" x2=\"46\" y2=\"54\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><line x1=\"46\" y1=\"54\" x2=\"54\" y2=\"46\" stroke=\"#a78bfa\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><circle cx=\"46\" cy=\"54\" r=\"3.5\" fill=\"#a78bfa\" opacity=\"0.3\"/></g></svg>"};
-var WEEKS = [{"n": 1, "dates": "11–17 may", "phase": 0, "phaseLabel": "Adaptación", "badge": "badge-adapt", "desc": "Primera semana del nuevo plan. Solo rodar, sin ritmos. Estamos en baja forma — paciencia.", "sessions": [{"id": "1_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min en casa", "warmup": null, "fuerza": "A", "bici": null}, {"id": "1_1", "day": "Martes", "type": "rodaje", "name": "Rodaje suave 4 km", "pace": "5:50–5:55 /km", "warmup": "easy", "fuerza": null, "bici": "35 min bici llano · ~12 km a 22 km/h · cadencia constante 80–85 rpm"}, {"id": "1_2", "day": "Jueves", "type": "rodaje", "name": "Rodaje suave 5 km", "pace": "5:50–5:55 /km", "warmup": "easy", "fuerza": null, "bici": "43 min bici llano · ~15 km a 22 km/h · cadencia constante 80–85 rpm"}, {"id": "1_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min en casa", "warmup": null, "fuerza": "B", "bici": null}, {"id": "1_4", "day": "Sábado", "type": "largo", "name": "Continuo suave 6 km", "pace": "5:55–6:00 /km", "warmup": "easy", "fuerza": null, "bici": "53 min bici llano · ~19 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 2, "dates": "18–24 may", "phase": 0, "phaseLabel": "Adaptación", "badge": "badge-adapt", "desc": "Primer fartlek muy suave. Cambios cortos para activar piernas.", "sessions": [{"id": "2_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "2_1", "day": "Martes", "type": "fartlek", "name": "Fartlek: 30s ligero / 90s suave x 8", "pace": "Ligero 5:20–5:30, suave 5:55 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "2_2", "day": "Jueves", "type": "rodaje", "name": "Rodaje suave 5 km", "pace": "5:50–5:55 /km", "warmup": "easy", "fuerza": null, "bici": "43 min bici llano · ~15 km a 22 km/h · cadencia constante 80–85 rpm"}, {"id": "2_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "2_4", "day": "Sábado", "type": "largo", "name": "Continuo suave 7 km", "pace": "5:55 /km", "warmup": "easy", "fuerza": null, "bici": "62 min bici llano · ~22 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 3, "dates": "25–31 may", "phase": 0, "phaseLabel": "Adaptación", "badge": "badge-adapt", "desc": "Primera sesión de series cortas. Ritmo cómodo, no máximo.", "sessions": [{"id": "3_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "3_1", "day": "Martes", "type": "series", "name": "5 x 300m, descanso 2 min", "pace": "5:20–5:30 /km — esfuerzo 7/10", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "3_2", "day": "Jueves", "type": "rodaje", "name": "Rodaje suave 5 km", "pace": "5:50 /km", "warmup": "easy", "fuerza": null, "bici": null}, {"id": "3_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "3_4", "day": "Sábado", "type": "largo", "name": "Continuo 7 km suave", "pace": "5:55 /km", "warmup": "easy", "fuerza": null, "bici": "62 min bici llano · ~22 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 4, "dates": "1–7 jun", "phase": 0, "phaseLabel": "Adaptación", "badge": "badge-adapt", "desc": "Subimos a 400m. Ritmo sigue cómodo, técnica primero.", "sessions": [{"id": "4_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "4_1", "day": "Martes", "type": "series", "name": "5 x 400m, descanso 2 min 30s", "pace": "5:20–5:25 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "4_2", "day": "Jueves", "type": "rodaje", "name": "Rodaje suave 6 km", "pace": "5:50 /km", "warmup": "easy", "fuerza": null, "bici": null}, {"id": "4_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "4_4", "day": "Sábado", "type": "largo", "name": "8 km suave", "pace": "5:55 /km", "warmup": "largo", "fuerza": null, "bici": "71 min bici llano · ~26 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 5, "dates": "8–14 jun", "phase": 0, "phaseLabel": "Descarga", "badge": "badge-adapt", "desc": "Semana de descarga. Reduce volumen.", "sessions": [{"id": "5_0", "day": "Martes", "type": "series", "name": "4 x 300m (descarga)", "pace": "5:25 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "5_1", "day": "Jueves", "type": "rodaje", "name": "Rodaje muy suave 4 km", "pace": "5:55 /km", "warmup": "easy", "fuerza": null, "bici": null}, {"id": "5_2", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "5_3", "day": "Sábado", "type": "largo", "name": "6 km muy suave", "pace": "5:55 /km", "warmup": "easy", "fuerza": null, "bici": "53 min bici llano · ~19 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 6, "dates": "15–21 jun", "phase": 0, "phaseLabel": "Adaptación", "badge": "badge-adapt", "desc": "Fartlek más estructurado. El cuerpo ya se mueve mejor.", "sessions": [{"id": "6_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "6_1", "day": "Martes", "type": "fartlek", "name": "Fartlek: 1 min ligero / 2 min suave x 7", "pace": "Ligero 5:20–5:30, suave 5:55 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "6_2", "day": "Jueves", "type": "rodaje", "name": "Rodaje 6 km + 1 km a 5:10", "pace": "5:50 → 5:10 /km", "warmup": "easy", "fuerza": null, "bici": "61 min bici llano · ~22 km a 22 km/h · cadencia constante 80–85 rpm"}, {"id": "6_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "6_4", "day": "Sábado", "type": "largo", "name": "10 km suave", "pace": "5:45–5:55 /km", "warmup": "largo", "fuerza": null, "bici": "87 min bici llano · ~31 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 7, "dates": "22–28 jun", "phase": 1, "phaseLabel": "Base", "badge": "badge-base", "desc": "Empieza la base. Series más repetidas, ritmos bajando.", "sessions": [{"id": "7_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "7_1", "day": "Martes", "type": "series", "name": "7 x 400m, descanso 90s", "pace": "5:10–5:15 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "7_2", "day": "Jueves", "type": "rodaje", "name": "Rodaje 7 km suave", "pace": "5:50 /km", "warmup": "easy", "fuerza": null, "bici": "61 min bici llano · ~22 km a 22 km/h · cadencia constante 80–85 rpm"}, {"id": "7_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "7_4", "day": "Sábado", "type": "largo", "name": "10 km progresivo", "pace": "5:55 → 5:30 /km", "warmup": "largo", "fuerza": null, "bici": "86 min bici llano · ~31 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 8, "dates": "29 jun – 5 jul", "phase": 1, "phaseLabel": "Base", "badge": "badge-base", "desc": "Primer fartlek con bloques de 2 minutos. Verano arranca — corre temprano.", "sessions": [{"id": "8_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "8_1", "day": "Martes", "type": "fartlek", "name": "Fartlek: 2 min ligero / 2 min suave x 6", "pace": "Ligero 5:05–5:10, suave 5:50 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "8_2", "day": "Jueves", "type": "rodaje", "name": "Rodaje 7 km + 2 km a 5:10", "pace": "5:50 → 5:10 /km", "warmup": "easy", "fuerza": null, "bici": "76 min bici llano · ~27 km a 22 km/h · cadencia constante 80–85 rpm"}, {"id": "8_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "8_4", "day": "Sábado", "type": "largo", "name": "11 km suave", "pace": "5:45–5:55 /km", "warmup": "largo", "fuerza": null, "bici": "96 min bici llano · ~35 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 9, "dates": "6–12 jul", "phase": 1, "phaseLabel": "Descarga", "badge": "badge-base", "desc": "Descarga. Calor aprieta — ajusta el ritmo (+10–15 seg/km si hace mucho).", "sessions": [{"id": "9_0", "day": "Martes", "type": "series", "name": "5 x 400m (descarga)", "pace": "5:15 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "9_1", "day": "Jueves", "type": "rodaje", "name": "Rodaje 5 km muy suave", "pace": "5:55 /km", "warmup": "easy", "fuerza": null, "bici": null}, {"id": "9_2", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "9_3", "day": "Sábado", "type": "largo", "name": "8 km suave", "pace": "5:55 /km", "warmup": "easy", "fuerza": null, "bici": "71 min bici llano · ~26 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 10, "dates": "13–19 jul", "phase": 1, "phaseLabel": "Base", "badge": "badge-base", "desc": "Primeras series de 600m. Subimos despacio.", "sessions": [{"id": "10_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "10_1", "day": "Martes", "type": "series", "name": "5 x 600m, descanso 2 min", "pace": "5:05–5:10 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "10_2", "day": "Jueves", "type": "rodaje", "name": "Rodaje 8 km suave", "pace": "5:50 /km", "warmup": "easy", "fuerza": null, "bici": "70 min bici llano · ~25 km a 22 km/h · cadencia constante 80–85 rpm"}, {"id": "10_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "10_4", "day": "Sábado", "type": "largo", "name": "12 km suave", "pace": "5:45 /km", "warmup": "largo", "fuerza": null, "bici": "103 min bici llano · ~37 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 11, "dates": "20–26 jul", "phase": 1, "phaseLabel": "Base", "badge": "badge-base", "desc": "Fartlek más estructurado. Mantén el plan aunque haga calor.", "sessions": [{"id": "11_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "11_1", "day": "Martes", "type": "fartlek", "name": "Fartlek: 2 min fuerte / 90s suave x 7", "pace": "Fuerte 5:00–5:05, suave 5:50 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "11_2", "day": "Jueves", "type": "series", "name": "6 x 600m, descanso 90s", "pace": "5:05 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "11_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "11_4", "day": "Sábado", "type": "largo", "name": "12 km progresivo", "pace": "5:50 → 5:20 /km", "warmup": "largo", "fuerza": null, "bici": "100 min bici llano · ~36 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 12, "dates": "27 jul – 2 ago", "phase": 1, "phaseLabel": "Descarga", "badge": "badge-base", "desc": "Descarga. Verano pleno — recupera bien.", "sessions": [{"id": "12_0", "day": "Martes", "type": "series", "name": "5 x 400m (descarga)", "pace": "5:15 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "12_1", "day": "Jueves", "type": "rodaje", "name": "Rodaje 5 km muy suave", "pace": "5:55 /km", "warmup": "easy", "fuerza": null, "bici": null}, {"id": "12_2", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "12_3", "day": "Sábado", "type": "largo", "name": "9 km suave", "pace": "5:55 /km", "warmup": "easy", "fuerza": null, "bici": "79 min bici llano · ~28 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 13, "dates": "3–9 ago", "phase": 1, "phaseLabel": "Base", "badge": "badge-base", "desc": "Cierre de la base. Primer contacto con 800m.", "sessions": [{"id": "13_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "13_1", "day": "Martes", "type": "series", "name": "5 x 800m, descanso 2 min", "pace": "5:00–5:05 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "13_2", "day": "Jueves", "type": "rodaje", "name": "Rodaje 8 km + 2 km a 5:05", "pace": "5:50 → 5:05 /km", "warmup": "easy", "fuerza": null, "bici": "82 min bici llano · ~30 km a 22 km/h · cadencia constante 80–85 rpm"}, {"id": "13_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "13_4", "day": "Sábado", "type": "largo", "name": "13 km suave–progresivo", "pace": "5:45 → 5:15 /km", "warmup": "largo", "fuerza": null, "bici": "107 min bici llano · ~39 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 14, "dates": "10–16 ago", "phase": 2, "phaseLabel": "Volumen", "badge": "badge-vol", "desc": "Arranca el volumen. Más series. Ajusta al calor de agosto.", "sessions": [{"id": "14_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "14_1", "day": "Martes", "type": "series", "name": "8 x 600m, descanso 90s", "pace": "5:00–5:05 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "14_2", "day": "Jueves", "type": "rodaje", "name": "Rodaje 8 km suave", "pace": "5:45 /km", "warmup": "easy", "fuerza": null, "bici": "69 min bici llano · ~25 km a 22 km/h · cadencia constante 80–85 rpm"}, {"id": "14_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "14_4", "day": "Sábado", "type": "largo", "name": "13 km progresivo", "pace": "5:45 → 5:10 /km", "warmup": "largo", "fuerza": null, "bici": "105 min bici llano · ~38 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 15, "dates": "17–23 ago", "phase": 2, "phaseLabel": "Volumen", "badge": "badge-vol", "desc": "Fartlek de bloques medianos. Primer contacto con ritmos a 4:55.", "sessions": [{"id": "15_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "15_1", "day": "Martes", "type": "fartlek", "name": "Fartlek: 3 min fuerte / 2 min suave x 6", "pace": "Fuerte 4:55–5:00, suave 5:45 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "15_2", "day": "Jueves", "type": "series", "name": "6 x 800m, descanso 2 min", "pace": "5:00 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "15_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "15_4", "day": "Sábado", "type": "largo", "name": "14 km suave", "pace": "5:40–5:50 /km", "warmup": "largo", "fuerza": null, "bici": "120 min bici llano · ~44 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 16, "dates": "24–30 ago", "phase": 2, "phaseLabel": "Descarga", "badge": "badge-vol", "desc": "Descarga. Agosto duro — no fuerces.", "sessions": [{"id": "16_0", "day": "Martes", "type": "series", "name": "5 x 600m (descarga)", "pace": "5:05 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "16_1", "day": "Jueves", "type": "rodaje", "name": "Rodaje 6 km muy suave", "pace": "5:55 /km", "warmup": "easy", "fuerza": null, "bici": null}, {"id": "16_2", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "16_3", "day": "Sábado", "type": "largo", "name": "10 km suave", "pace": "5:50 /km", "warmup": "easy", "fuerza": null, "bici": "87 min bici llano · ~31 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 17, "dates": "31 ago – 6 sep", "phase": 2, "phaseLabel": "Volumen", "badge": "badge-vol", "desc": "Primer acercamiento a 1000m. Semana clave de volumen.", "sessions": [{"id": "17_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "17_1", "day": "Martes", "type": "series", "name": "5 x 1000m, descanso 2 min 30s", "pace": "4:55–5:00 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "17_2", "day": "Jueves", "type": "rodaje", "name": "Rodaje 9 km con cambios 30/30", "pace": "Alternando 4:50 / 5:50 /km", "warmup": "easy", "fuerza": null, "bici": "72 min bici llano · ~26 km a 22 km/h · cadencia constante 80–85 rpm"}, {"id": "17_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "17_4", "day": "Sábado", "type": "largo", "name": "14 km (últimos 3 km a 5:10)", "pace": "5:40 → 5:10 /km", "warmup": "largo", "fuerza": null, "bici": "113 min bici llano · ~41 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 18, "dates": "7–13 sep", "phase": 2, "phaseLabel": "Volumen", "badge": "badge-vol", "desc": "Fartlek sueco. Septiembre — el calor empieza a ceder.", "sessions": [{"id": "18_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "18_1", "day": "Martes", "type": "fartlek", "name": "Fartlek sueco: 1-2-3-2-1 min x 2", "pace": "Rápidos a 4:50–4:55 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "18_2", "day": "Jueves", "type": "series", "name": "7 x 800m, descanso 90s", "pace": "4:58 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "18_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "18_4", "day": "Sábado", "type": "largo", "name": "15 km progresivo", "pace": "5:40 → 5:10 /km", "warmup": "largo", "fuerza": null, "bici": "121 min bici llano · ~44 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 19, "dates": "14–20 sep", "phase": 2, "phaseLabel": "Volumen", "badge": "badge-vol", "desc": "Cierre de volumen. 5x1200m. Largo de 16 km.", "sessions": [{"id": "19_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "19_1", "day": "Martes", "type": "series", "name": "5 x 1200m, descanso 2 min 30s", "pace": "4:55 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "19_2", "day": "Jueves", "type": "rodaje", "name": "Rodaje 9 km + 3 km a 5:05", "pace": "5:45 → 5:05 /km", "warmup": "easy", "fuerza": null, "bici": "97 min bici llano · ~35 km a 22 km/h · cadencia constante 80–85 rpm"}, {"id": "19_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "19_4", "day": "Sábado", "type": "largo", "name": "16 km suave", "pace": "5:35–5:45 /km", "warmup": "largo", "fuerza": null, "bici": "136 min bici llano · ~49 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 20, "dates": "21–27 sep", "phase": 3, "phaseLabel": "Intensidad", "badge": "badge-int", "desc": "Empieza la fase clave. Trabajo específico a ritmo de carrera.", "sessions": [{"id": "20_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "20_1", "day": "Martes", "type": "series", "name": "6 x 1000m, descanso 2 min", "pace": "4:50–4:55 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "20_2", "day": "Jueves", "type": "fartlek", "name": "Fartlek: 4 min a objetivo / 2 min suave x 5", "pace": "4:50 /km objetivo", "warmup": "quality", "fuerza": null, "bici": "60 min bici llano · ~22 km a 22 km/h · cadencia constante 80–85 rpm"}, {"id": "20_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "20_4", "day": "Sábado", "type": "largo", "name": "15 km progresivo", "pace": "5:35 → 5:00 /km", "warmup": "largo", "fuerza": null, "bici": "118 min bici llano · ~43 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 21, "dates": "28 sep – 4 oct", "phase": 3, "phaseLabel": "Intensidad", "badge": "badge-int", "desc": "Cambios de ritmo 30/30. Largo de 16 km.", "sessions": [{"id": "21_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "21_1", "day": "Martes", "type": "series", "name": "5 x 1200m, descanso 2 min", "pace": "4:50 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "21_2", "day": "Jueves", "type": "rodaje", "name": "10 km con cambios de ritmo 30/30", "pace": "Alternando 4:35 / 5:45 /km", "warmup": "easy", "fuerza": null, "bici": "76 min bici llano · ~27 km a 22 km/h · cadencia constante 80–85 rpm"}, {"id": "21_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "21_4", "day": "Sábado", "type": "largo", "name": "16 km suave", "pace": "5:30–5:40 /km", "warmup": "largo", "fuerza": null, "bici": "134 min bici llano · ~49 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 22, "dates": "5–11 oct", "phase": 3, "phaseLabel": "Descarga", "badge": "badge-int", "desc": "Descarga. Otoño — mejor temperatura para correr.", "sessions": [{"id": "22_0", "day": "Martes", "type": "series", "name": "5 x 800m (descarga)", "pace": "4:55 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "22_1", "day": "Jueves", "type": "rodaje", "name": "Rodaje 6 km suave", "pace": "5:50 /km", "warmup": "easy", "fuerza": null, "bici": null}, {"id": "22_2", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "22_3", "day": "Sábado", "type": "largo", "name": "11 km suave", "pace": "5:45 /km", "warmup": "easy", "fuerza": null, "bici": "94 min bici llano · ~34 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 23, "dates": "12–18 oct", "phase": 3, "phaseLabel": "Intensidad", "badge": "badge-int", "desc": "4x2000m al ritmo de carrera. Largo máximo de 17 km.", "sessions": [{"id": "23_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "23_1", "day": "Martes", "type": "series", "name": "4 x 2000m, descanso 3 min", "pace": "4:50–4:55 /km (objetivo)", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "23_2", "day": "Jueves", "type": "fartlek", "name": "Fartlek: 5 min a objetivo / 2 min suave x 4", "pace": "4:50 /km", "warmup": "quality", "fuerza": null, "bici": "67 min bici llano · ~24 km a 22 km/h · cadencia constante 80–85 rpm"}, {"id": "23_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "23_4", "day": "Sábado", "type": "largo", "name": "17 km (últimos 5 km a objetivo) — máximo", "pace": "5:35 → 4:50 /km", "warmup": "largo", "fuerza": null, "bici": "133 min bici llano · ~48 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 24, "dates": "19–25 oct", "phase": 3, "phaseLabel": "Intensidad", "badge": "badge-int", "desc": "Fartlek sueco largo. 8x800m. La forma está llegando.", "sessions": [{"id": "24_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "24_1", "day": "Martes", "type": "fartlek", "name": "Fartlek sueco: 1-2-3-2-1 min x 2", "pace": "Rápidos a 4:40–4:45 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "24_2", "day": "Jueves", "type": "series", "name": "8 x 800m, descanso 90s", "pace": "4:45–4:50 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "24_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "24_4", "day": "Sábado", "type": "largo", "name": "16 km (8 km a ritmo objetivo)", "pace": "5:30 → 4:50 /km", "warmup": "largo", "fuerza": null, "bici": "124 min bici llano · ~45 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 25, "dates": "26 oct – 1 nov", "phase": 3, "phaseLabel": "Descarga", "badge": "badge-int", "desc": "Descarga. Pico de forma llegando — no te apresures.", "sessions": [{"id": "25_0", "day": "Martes", "type": "series", "name": "5 x 1000m (descarga)", "pace": "4:55 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "25_1", "day": "Jueves", "type": "rodaje", "name": "Rodaje 7 km muy suave", "pace": "5:55 /km", "warmup": "easy", "fuerza": null, "bici": null}, {"id": "25_2", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "25_3", "day": "Sábado", "type": "largo", "name": "11 km suave", "pace": "5:45 /km", "warmup": "easy", "fuerza": null, "bici": "94 min bici llano · ~34 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 26, "dates": "2–8 nov", "phase": 3, "phaseLabel": "Intensidad", "badge": "badge-int", "desc": "Última semana de carga intensa. 3x3000m — el test definitivo.", "sessions": [{"id": "26_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A — última intensa", "pace": "30 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "26_1", "day": "Martes", "type": "series", "name": "3 x 3000m, descanso 4 min", "pace": "4:45–4:50 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "26_2", "day": "Jueves", "type": "fartlek", "name": "Fartlek: 6 min a objetivo / 2 min suave x 3", "pace": "4:50 /km", "warmup": "quality", "fuerza": null, "bici": "67 min bici llano · ~24 km a 22 km/h · cadencia constante 80–85 rpm"}, {"id": "26_3", "day": "Viernes", "type": "fuerza", "name": "Full-body B", "pace": "25 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "26_4", "day": "Sábado", "type": "largo", "name": "15 km (10 km a ritmo objetivo)", "pace": "5:30 → 4:50 /km", "warmup": "largo", "fuerza": null, "bici": "116 min bici llano · ~42 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 27, "dates": "9–15 nov", "phase": 4, "phaseLabel": "Taper", "badge": "badge-taper", "desc": "Empieza el taper. Reduce volumen al 70%. Mantén intensidad.", "sessions": [{"id": "27_0", "day": "Lunes", "type": "fuerza", "name": "Full-body A — mantenimiento", "pace": "15 min", "warmup": null, "fuerza": "A", "bici": null}, {"id": "27_1", "day": "Martes", "type": "series", "name": "5 x 1000m, descanso 2 min", "pace": "4:50 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "27_2", "day": "Jueves", "type": "fartlek", "name": "20 min suave + 3 x 2 min a objetivo", "pace": "4:50 /km en rápidos", "warmup": "easy", "fuerza": null, "bici": null}, {"id": "27_3", "day": "Sábado", "type": "largo", "name": "13 km suave", "pace": "5:40 /km", "warmup": "largo", "fuerza": null, "bici": "110 min bici llano · ~40 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 28, "dates": "16–22 nov", "phase": 4, "phaseLabel": "Taper", "badge": "badge-taper", "desc": "Semana previa. Poco volumen. Llegamos frescos.", "sessions": [{"id": "28_0", "day": "Martes", "type": "series", "name": "4 x 800m, descanso 2 min", "pace": "4:50 /km", "warmup": "quality", "fuerza": null, "bici": null}, {"id": "28_1", "day": "Jueves", "type": "rodaje", "name": "25 min suave + 4 x 1 min a objetivo", "pace": "4:50 /km en rápidos", "warmup": "easy", "fuerza": null, "bici": "30 min bici muy suave · solo mover piernas"}, {"id": "28_2", "day": "Viernes", "type": "fuerza", "name": "Full-body B — muy ligero", "pace": "15 min", "warmup": null, "fuerza": "B", "bici": null}, {"id": "28_3", "day": "Sábado", "type": "largo", "name": "8 km muy suave", "pace": "5:55 /km", "warmup": "easy", "fuerza": null, "bici": "71 min bici llano · ~26 km a 22 km/h · cadencia constante 80–85 rpm"}]}, {"n": 29, "dates": "23–29 nov", "phase": 4, "phaseLabel": "Carrera", "badge": "badge-taper", "isRaceWeek": true, "desc": "LA semana. Descansa, hidrata, confía en el trabajo de 29 semanas.", "sessions": [{"id": "29_0", "day": "Lunes", "type": "rodaje", "name": "15 min activación muy suave", "pace": "5:55–6:00 /km", "warmup": "easy", "fuerza": null, "bici": null}, {"id": "29_1", "day": "Martes", "type": "rest", "name": "Descanso total", "pace": "—", "warmup": null, "fuerza": null, "bici": null}, {"id": "29_2", "day": "Miércoles", "type": "rodaje", "name": "20 min suave + 4 strides de 80m", "pace": "Strides a 4:40 /km", "warmup": null, "fuerza": null, "bici": null}, {"id": "29_3", "day": "Jue–Sáb", "type": "rest", "name": "Descanso total — hidratación y nutrición", "pace": "—", "warmup": null, "fuerza": null, "bici": null}, {"id": "29_4", "day": "Dom 29 nov", "type": "race", "name": "MEDIA MARATÓN SEVILLA", "pace": "Objetivo 4:50 /km · Meta ~1h 42'", "warmup": null, "fuerza": null, "bici": null}]}];
-var PROG = {"0": {"A": [["Sentadilla búlgara", "2×8", "Baja muy lento (4 seg). Aprende el movimiento.", null, "90s descanso"], ["Flexiones", "2×8", "De rodillas si es necesario. Técnica primero.", null, "75s descanso"], ["Hip thrust en suelo", "2×12", "Aprende a apretar el glúteo arriba.", null, "75s descanso"], ["Remo con mochila", "2×8", "Mochila ligera. Codo cerca del cuerpo.", "2–3 kg", "90s descanso"], ["Zancada con giro", "2×8", "Giro suave. Equilibrio primero.", null, "75s descanso"], ["Burpee", "2×5", "Sin salto si es mucho.", null, "90s descanso"]], "B": [["Puente glúteo unilateral", "2×10", "Empieza con los dos pies si cuesta.", null, "75s descanso"], ["Pike push-up", "2×6", "Caderas bien arriba.", null, "75s descanso"], ["Dead bug", "2×6", "Muy lento. Espalda pegada al suelo.", null, "60s descanso"], ["Superman", "2×10", "Sube poco a poco, sin forzar lumbar.", null, "60s descanso"], ["Plancha lateral", "2×20s", "De rodillas si no aguantas.", null, "60s descanso"], ["Mountain climber", "2×12", "Ritmo lento y controlado.", null, "75s descanso"]], "C": [["Sentadilla sumo", "2×10", "Pies anchos, apuntando afuera.", null, "90s descanso"], ["Remo invertido en mesa", "2×6", "Cuerpo recto. Tira del pecho.", null, "90s descanso"], ["Zancada reversa", "2×8", "Paso atrás controlado.", null, "75s descanso"], ["Dips en silla", "2×8", "Baja solo lo que puedas.", null, "75s descanso"], ["Elevación de talones", "2×15", "Sube despacio, baja 3 seg.", null, "60s descanso"], ["Saltos al cajón", "2×5", "Escalón bajo si no tienes cajón.", null, "90s descanso"]], "D": [["Sentadilla con salto", "2×6", "Sin salto si cansas.", null, "90s descanso"], ["Flexiones con pausa", "2×6", "2 seg abajo.", null, "75s descanso"], ["Step-up a silla", "2×8", "Empuja con el talón del pie de arriba.", null, "75s descanso"], ["Plancha con toque hombro", "2×8", "Muy lento. Caderas quietas.", null, "60s descanso"], ["Reverse lunge con rodilla arriba", "2×8", "Equilibrio primero.", null, "75s descanso"], ["Mountain climber", "2×12", "Lento y controlado.", null, "75s descanso"]]}, "1": {"A": [["Sentadilla búlgara", "3×10", "3 seg bajando.", "4–6 kg mochila", "90s descanso"], ["Flexiones", "3×10", "Pecho casi toca el suelo.", null, "75s descanso"], ["Hip thrust en suelo", "3×15", "1 seg arriba.", "5–8 kg", "75s descanso"], ["Remo con mochila", "3×10", "Codo 90° arriba.", "4–6 kg", "90s descanso"], ["Zancada con giro", "3×10", "Gira hacia pierna delantera.", null, "75s descanso"], ["Burpee", "3×7", "Con salto al final.", null, "90s descanso"]], "B": [["Puente glúteo unilateral", "3×12", "Una pierna al aire.", null, "75s descanso"], ["Pike push-up", "3×8", "Cabeza casi al suelo.", null, "75s descanso"], ["Dead bug", "3×8", "Brazo y pierna opuestos.", null, "60s descanso"], ["Superman", "3×12", "2 seg arriba.", null, "60s descanso"], ["Plancha lateral", "3×25s", "Cadera bien arriba.", null, "60s descanso"], ["Mountain climber", "3×20", "Mas ritmo que antes.", null, "75s descanso"]], "C": [["Sentadilla sumo", "3×12", "Muslos paralelos al suelo.", "5–8 kg mochila", "90s descanso"], ["Remo invertido en mesa", "3×8", "Pecho toca la mesa.", null, "90s descanso"], ["Zancada reversa", "3×10", "Rodilla casi toca el suelo.", null, "75s descanso"], ["Dips en silla", "3×10", "Baja hasta 90° de codo.", null, "75s descanso"], ["Elevación de talones", "3×20", "Añade libro/mochila ligera.", "2–3 kg", "60s descanso"], ["Saltos al cajón", "3×8", "Aterriza amortiguando rodillas.", null, "90s descanso"]], "D": [["Sentadilla con salto", "3×8", "Aterriza suave.", null, "90s descanso"], ["Flexiones con pausa", "3×8", "2 seg abajo.", null, "75s descanso"], ["Step-up a silla", "3×10", "Alterna piernas.", null, "75s descanso"], ["Plancha con toque hombro", "3×10", "Caderas quietas.", null, "60s descanso"], ["Reverse lunge con rodilla arriba", "3×10", "Equilibra antes de subir rodilla.", null, "75s descanso"], ["Mountain climber", "3×20", "Mas rapido.", null, "75s descanso"]]}, "2": {"A": [["Sentadilla búlgara", "3×12", "3 seg bajando.", "8–12 kg mochila", "2 min descanso"], ["Flexiones", "3×12", "Pausa 1 seg abajo.", null, "75s descanso"], ["Hip thrust en suelo", "3×15", "2 seg arriba.", "10–15 kg", "2 min descanso"], ["Remo con mochila", "3×12", "Codo sube sobre el torso.", "8–10 kg", "2 min descanso"], ["Zancada con giro", "3×12", "Giro amplio.", null, "75s descanso"], ["Burpee", "3×8", "Salto con brazos arriba.", null, "90s descanso"]], "B": [["Puente glúteo unilateral", "3×15", "Pierna contraria extendida.", null, "75s descanso"], ["Pike push-up", "3×10", "Cabeza al suelo.", null, "75s descanso"], ["Dead bug", "3×10", "Lento y controlado.", null, "60s descanso"], ["Superman", "3×15", "2 seg arriba.", null, "60s descanso"], ["Plancha lateral", "3×35s", "Toque de cadera si puedes.", null, "75s descanso"], ["Mountain climber", "3×25", "Ritmo sostenido.", null, "75s descanso"]], "C": [["Sentadilla sumo", "3×15", "Profundidad máxima.", "10–15 kg mochila", "2 min descanso"], ["Remo invertido en mesa", "3×10", "1 seg arriba tocando mesa.", null, "90s descanso"], ["Zancada reversa", "3×12", "Paso largo.", "5–8 kg mochila", "90s descanso"], ["Dips en silla", "3×12", "1 seg abajo.", null, "75s descanso"], ["Elevación de talones", "3×25", "Bajada 4 seg.", "5–8 kg", "75s descanso"], ["Saltos al cajón", "3×10", "Escalón mas alto si puedes.", null, "90s descanso"]], "D": [["Sentadilla con salto", "3×10", "Sin pausa entre reps.", null, "90s descanso"], ["Flexiones con pausa", "3×10", "3 seg abajo.", null, "75s descanso"], ["Step-up a silla", "3×12", "Añade mochila ligera.", "4–6 kg", "90s descanso"], ["Plancha con toque hombro", "3×12", "Más rápido.", null, "60s descanso"], ["Reverse lunge con rodilla arriba", "3×12", "Rodilla hasta la cadera.", null, "75s descanso"], ["Mountain climber", "3×25", "Casi al sprint los últimos.", null, "75s descanso"]]}, "3": {"A": [["Sentadilla búlgara", "4×10", "3 seg bajando. Máxima carga tolerable.", "15–20 kg mochila", "2 min descanso"], ["Flexiones", "4×12", "2 seg abajo. Pies elevados si puedes.", null, "90s descanso"], ["Hip thrust en suelo", "4×15", "2 seg arriba. Máxima carga.", "18–25 kg", "2 min descanso"], ["Remo con mochila", "4×12", "Codo bien arriba.", "12–15 kg", "2 min descanso"], ["Zancada con giro", "3×12", "Giro explosivo.", null, "90s descanso"], ["Burpee", "4×10", "Máximo ritmo posible.", null, "90s descanso"]], "B": [["Puente glúteo unilateral", "4×15", "2 seg arriba.", null, "90s descanso"], ["Pike push-up", "3×12", "1 seg abajo.", null, "75s descanso"], ["Dead bug", "3×10", "Sin despegar la espalda.", null, "60s descanso"], ["Superman", "3×15", "3 seg arriba.", null, "60s descanso"], ["Plancha lateral", "3×40s", "Eleva pierna si puedes.", null, "75s descanso"], ["Mountain climber", "4×25", "Sprint. Rodillas al pecho.", null, "90s descanso"]], "C": [["Sentadilla sumo", "4×15", "Profundidad completa.", "18–22 kg mochila", "2 min descanso"], ["Remo invertido en mesa", "4×10", "2 seg arriba.", "Pies elevados", "90s descanso"], ["Zancada reversa", "4×12", "Carga máxima tolerable.", "10–12 kg mochila", "2 min descanso"], ["Dips en silla", "4×12", "2 seg abajo.", null, "90s descanso"], ["Elevación de talones", "4×25", "Bajada 4 seg.", "10–12 kg", "90s descanso"], ["Saltos al cajón", "4×10", "Máxima explosividad.", null, "2 min descanso"]], "D": [["Sentadilla con salto", "4×12", "Máxima altura.", null, "2 min descanso"], ["Flexiones con pausa", "4×10", "3 seg abajo. Pies elevados.", null, "90s descanso"], ["Step-up a silla", "4×12", "Explosivo subiendo.", "8–10 kg mochila", "2 min descanso"], ["Plancha con toque hombro", "4×12", "Máximo ritmo.", null, "75s descanso"], ["Reverse lunge con rodilla arriba", "4×12", "Explosivo.", null, "90s descanso"], ["Mountain climber", "4×30", "Sprint total.", null, "90s descanso"]]}, "4": {"A": [["Sentadilla búlgara", "2×8", "Sin carga. Mantenimiento.", null, "90s descanso"], ["Flexiones", "2×10", "Cómodo. Sin forzar.", null, "75s descanso"], ["Hip thrust en suelo", "2×12", "Suave. Solo activar.", null, "75s descanso"], ["Remo con mochila", "2×8", "Carga ligera.", "3–4 kg", "90s descanso"], ["Zancada con giro", "2×8", "Suave. Movilidad.", null, "75s descanso"], ["Burpee", "2×5", "Tranquilo.", null, "90s descanso"]], "B": [["Puente glúteo unilateral", "2×10", "Activación. Sin forzar.", null, "75s descanso"], ["Pike push-up", "2×8", "Suave.", null, "75s descanso"], ["Dead bug", "2×8", "Lento. Activar core.", null, "60s descanso"], ["Superman", "2×10", "Suave.", null, "60s descanso"], ["Plancha lateral", "2×25s", "Sin forzar.", null, "60s descanso"], ["Mountain climber", "2×15", "Lento. La fuerza ya está hecha.", null, "75s descanso"]], "C": [["Sentadilla sumo", "2×10", "Sin carga.", null, "90s descanso"], ["Remo invertido en mesa", "2×8", "Suave.", null, "90s descanso"], ["Zancada reversa", "2×8", "Movilidad.", null, "75s descanso"], ["Dips en silla", "2×8", "Sin forzar.", null, "75s descanso"], ["Elevación de talones", "2×15", "Suave. Activar gemelos.", null, "60s descanso"], ["Saltos al cajón", "2×5", "Solo explosividad neural.", null, "90s descanso"]], "D": [["Sentadilla con salto", "2×6", "Suave. Sin fatigar piernas.", null, "90s descanso"], ["Flexiones con pausa", "2×6", "Tranquilo.", null, "75s descanso"], ["Step-up a silla", "2×8", "Solo activación.", null, "75s descanso"], ["Plancha con toque hombro", "2×8", "Lento.", null, "60s descanso"], ["Reverse lunge con rodilla arriba", "2×8", "Movilidad suave.", null, "75s descanso"], ["Mountain climber", "2×15", "Lento. Llegamos frescos.", null, "75s descanso"]]}};
-var PHASE_FLABEL = {"0": "Adaptación — aprende los movimientos · 2 series", "1": "Base — añade reps progresivamente · 3 series", "2": "Volumen — añade carga · 3 series", "3": "Intensidad — máxima exigencia · 3–4 series", "4": "Taper — solo mantenimiento · 2 series"};
-var LOCKED = {};
- 
+var WEEKS = [
+  {
+    "n": 1,
+    "dates": "11–17 may",
+    "phase": 0,
+    "phaseLabel": "Adaptación",
+    "badge": "badge-adapt",
+    "desc": "Semana 1 — Empezamos muy suave. Solo rodaje, sin ritmos. El cuerpo se activa.",
+    "sessions": [
+      {
+        "id": "1_0",
+        "day": "Martes",
+        "type": "rodaje",
+        "name": "Rodaje suave 4 km",
+        "pace": "5:55–6:00 /km",
+        "warmup": "easy",
+        "bici": "35 min bici llano · ~12 km · cadencia 80–85 rpm"
+      },
+      {
+        "id": "1_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A — técnica",
+        "pace": "25 min · aprende los movimientos",
+        "fuerza": "A"
+      },
+      {
+        "id": "1_2",
+        "day": "Jueves",
+        "type": "rodaje",
+        "name": "Rodaje suave 5 km",
+        "pace": "5:50–5:55 /km",
+        "warmup": "easy",
+        "bici": "44 min bici llano · ~16 km · cadencia 80–85 rpm"
+      },
+      {
+        "id": "1_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B — técnica",
+        "pace": "25 min · aprende los movimientos",
+        "fuerza": "B"
+      },
+      {
+        "id": "1_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo suave 6 km",
+        "pace": "6:00 /km — sin forzar",
+        "warmup": "easy",
+        "bici": "54 min bici llano · ~19 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 2,
+    "dates": "18–24 may",
+    "phase": 0,
+    "phaseLabel": "Adaptación",
+    "badge": "badge-adapt",
+    "desc": "Semana 2 — Primer fartlek muy suave. Cambios cortos para activar el sistema aeróbico.",
+    "sessions": [
+      {
+        "id": "2_0",
+        "day": "Martes",
+        "type": "fartlek",
+        "name": "Fartlek: 30s ligero / 90s suave × 8",
+        "pace": "Ligero 5:25–5:30 · suave 5:55 /km",
+        "warmup": "quality",
+        "bici": "43 min bici llano · ~15 km · cadencia 80–85 rpm"
+      },
+      {
+        "id": "2_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A",
+        "pace": "30 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "2_2",
+        "day": "Jueves",
+        "type": "rodaje",
+        "name": "Rodaje suave 6 km",
+        "pace": "5:50–5:55 /km",
+        "warmup": "easy",
+        "bici": "52 min bici llano · ~19 km · cadencia 80–85 rpm"
+      },
+      {
+        "id": "2_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B",
+        "pace": "30 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "2_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo suave 7 km",
+        "pace": "5:55 /km",
+        "warmup": "largo",
+        "bici": "62 min bici llano · ~22 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 3,
+    "dates": "25–31 may",
+    "phase": 0,
+    "phaseLabel": "Adaptación",
+    "badge": "badge-adapt",
+    "desc": "Semana 3 — Primera semana con DOS calidades: series cortas el martes y fartlek el jueves. La fuerza se mueve a miércoles y viernes, nunca antes de calidad.",
+    "sessions": [
+      {
+        "id": "3_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "5 × 300m · desc. 90s",
+        "pace": "5:20–5:25 /km — esfuerzo 7/10",
+        "warmup": "quality"
+      },
+      {
+        "id": "3_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A",
+        "pace": "30 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "3_2",
+        "day": "Jueves",
+        "type": "fartlek",
+        "name": "Fartlek: 45s / 90s × 6",
+        "pace": "Rápido 5:20 · suave 5:50 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "3_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B",
+        "pace": "30 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "3_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo suave 8 km",
+        "pace": "5:55 /km",
+        "warmup": "largo",
+        "bici": "71 min bici llano · ~26 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 4,
+    "dates": "1–7 jun",
+    "phase": 0,
+    "phaseLabel": "Adaptación",
+    "badge": "badge-adapt",
+    "desc": "Semana 4 — Subimos a 400m. Dos calidades. El largo llega a 9 km.",
+    "sessions": [
+      {
+        "id": "4_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "5 × 400m · desc. 2 min",
+        "pace": "5:15–5:20 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "4_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A",
+        "pace": "30 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "4_2",
+        "day": "Jueves",
+        "type": "fartlek",
+        "name": "Fartlek: 1 min / 2 min × 6",
+        "pace": "Rápido 5:15 · suave 5:50 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "4_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B",
+        "pace": "30 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "4_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo suave 9 km",
+        "pace": "5:50–5:55 /km",
+        "warmup": "largo",
+        "bici": "79 min bici llano · ~28 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 5,
+    "dates": "8–14 jun",
+    "phase": 0,
+    "phaseLabel": "Descarga",
+    "badge": "badge-adapt",
+    "desc": "Semana 5 — DESCARGA real. Sin calidades, sin fuerza intensa. Solo rodar y recuperar.",
+    "sessions": [
+      {
+        "id": "5_0",
+        "day": "Martes",
+        "type": "rodaje",
+        "name": "Rodaje suave 4 km",
+        "pace": "6:00 /km — muy cómodo",
+        "warmup": "easy"
+      },
+      {
+        "id": "5_1",
+        "day": "Jueves",
+        "type": "rodaje",
+        "name": "Rodaje suave 5 km",
+        "pace": "5:55 /km",
+        "warmup": "easy"
+      },
+      {
+        "id": "5_2",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B — mantenimiento",
+        "pace": "20 min · ligero",
+        "fuerza": "B"
+      },
+      {
+        "id": "5_3",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo suave 6 km",
+        "pace": "6:00 /km",
+        "warmup": "easy",
+        "bici": "54 min bici llano · ~19 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 6,
+    "dates": "15–21 jun",
+    "phase": 0,
+    "phaseLabel": "Adaptación",
+    "badge": "badge-adapt",
+    "desc": "Semana 6 — Cierre de adaptación. Ritmos bajando a 5:10. Primer contacto con 600m.",
+    "sessions": [
+      {
+        "id": "6_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "5 × 400m · desc. 90s",
+        "pace": "5:10–5:15 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "6_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A",
+        "pace": "30 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "6_2",
+        "day": "Jueves",
+        "type": "fartlek",
+        "name": "Fartlek: 2 min / 2 min × 5",
+        "pace": "Rápido 5:05–5:10 · suave 5:50 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "6_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B",
+        "pace": "30 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "6_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo 10 km suave",
+        "pace": "5:45–5:55 /km",
+        "warmup": "largo",
+        "bici": "87 min bici llano · ~31 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 7,
+    "dates": "22–28 jun",
+    "phase": 1,
+    "phaseLabel": "Base",
+    "badge": "badge-base",
+    "desc": "Semana 7 — Comienza la base. 600m y 800m. ☀️ Calor: si >28°C mueve la sesión a antes de las 8:00 o sustitúyela por bici con intervalos de intensidad equivalente.",
+    "sessions": [
+      {
+        "id": "7_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "6 × 600m · desc. 90s",
+        "pace": "5:05–5:10 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "7_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A",
+        "pace": "35 min · 3 series",
+        "fuerza": "A"
+      },
+      {
+        "id": "7_2",
+        "day": "Jueves",
+        "type": "fartlek",
+        "name": "Fartlek: 2 min / 90s × 6",
+        "pace": "Rápido 5:00–5:05 · suave 5:45 /km",
+        "warmup": "quality",
+        "bici": "64 min bici llano · ~23 km · cadencia 80–85 rpm"
+      },
+      {
+        "id": "7_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B",
+        "pace": "35 min · 3 series",
+        "fuerza": "B"
+      },
+      {
+        "id": "7_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo 11 km suave",
+        "pace": "5:45 /km",
+        "warmup": "largo",
+        "bici": "94 min bici llano · ~34 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 8,
+    "dates": "29 jun – 5 jul",
+    "phase": 1,
+    "phaseLabel": "Base",
+    "badge": "badge-base",
+    "desc": "Semana 8 — Primer 800m en series. ☀️ Pleno verano — prioriza horario temprano o bici. No hagas series al sol.",
+    "sessions": [
+      {
+        "id": "8_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "5 × 800m · desc. 2 min",
+        "pace": "5:05–5:10 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "8_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A",
+        "pace": "35 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "8_2",
+        "day": "Jueves",
+        "type": "fartlek",
+        "name": "Fartlek sueco: 1-2-3-2-1 min × 1",
+        "pace": "Rápidos a 5:00–5:05 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "8_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B",
+        "pace": "35 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "8_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo 12 km suave",
+        "pace": "5:45 /km",
+        "warmup": "largo",
+        "bici": "103 min bici llano · ~37 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 9,
+    "dates": "6–12 jul",
+    "phase": 1,
+    "phaseLabel": "TEST 5K",
+    "badge": "badge-base",
+    "isTest": true,
+    "desc": "⏱️ SEMANA TEST — Control 5K el martes. Corre a tope para medir tu nivel real. El resultado marcará los ritmos de las próximas fases. Resto de semana suave.",
+    "sessions": [
+      {
+        "id": "9_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "TEST 5K — esfuerzo máximo",
+        "pace": "Objetivo: ver dónde estás realmente",
+        "warmup": "quality"
+      },
+      {
+        "id": "9_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A — ligero",
+        "pace": "25 min tras el test",
+        "fuerza": "A"
+      },
+      {
+        "id": "9_2",
+        "day": "Jueves",
+        "type": "rodaje",
+        "name": "Rodaje recuperación 5 km",
+        "pace": "6:00 /km — muy suave",
+        "warmup": "easy"
+      },
+      {
+        "id": "9_3",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo suave 9 km",
+        "pace": "5:50 /km",
+        "warmup": "largo",
+        "bici": "78 min bici llano · ~28 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 10,
+    "dates": "13–19 jul",
+    "phase": 1,
+    "phaseLabel": "Base",
+    "badge": "badge-base",
+    "desc": "Semana 10 — Retomamos. Ajusta ritmos según el test 5K. ☀️ Pleno verano — prioriza horario temprano o bici. No hagas series al sol.",
+    "sessions": [
+      {
+        "id": "10_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "7 × 600m · desc. 90s",
+        "pace": "5:00–5:05 /km (ajusta si el test lo indica)",
+        "warmup": "quality"
+      },
+      {
+        "id": "10_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A",
+        "pace": "35 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "10_2",
+        "day": "Jueves",
+        "type": "fartlek",
+        "name": "Fartlek: 3 min / 90s × 5",
+        "pace": "Rápido 4:58–5:02 · suave 5:45 /km",
+        "warmup": "quality",
+        "bici": "70 min bici llano · ~25 km · cadencia 80–85 rpm"
+      },
+      {
+        "id": "10_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B",
+        "pace": "35 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "10_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo 12 km progresivo",
+        "pace": "5:50 → 5:20 /km",
+        "warmup": "largo",
+        "bici": "100 min bici llano · ~36 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 11,
+    "dates": "20–26 jul",
+    "phase": 1,
+    "phaseLabel": "Base",
+    "badge": "badge-base",
+    "desc": "Semana 11 — 800m más repeticiones. El largo llega a 13 km. ☀️ Pleno verano — prioriza horario temprano o bici. No hagas series al sol.",
+    "sessions": [
+      {
+        "id": "11_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "6 × 800m · desc. 90s",
+        "pace": "5:00–5:05 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "11_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A",
+        "pace": "35 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "11_2",
+        "day": "Jueves",
+        "type": "fartlek",
+        "name": "Fartlek sueco: 1-2-3-2-1 min × 2",
+        "pace": "Rápidos a 4:55–5:00 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "11_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B",
+        "pace": "35 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "11_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo 13 km suave",
+        "pace": "5:40–5:50 /km",
+        "warmup": "largo",
+        "bici": "112 min bici llano · ~41 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 12,
+    "dates": "27 jul – 2 ago",
+    "phase": 1,
+    "phaseLabel": "Descarga",
+    "badge": "badge-base",
+    "desc": "Semana 12 — DESCARGA real. Sin calidad, sin fuerza intensa. Agosto duro — recarga.",
+    "sessions": [
+      {
+        "id": "12_0",
+        "day": "Martes",
+        "type": "rodaje",
+        "name": "Rodaje suave 5 km",
+        "pace": "6:00 /km",
+        "warmup": "easy"
+      },
+      {
+        "id": "12_1",
+        "day": "Jueves",
+        "type": "rodaje",
+        "name": "Rodaje suave 6 km",
+        "pace": "5:55 /km",
+        "warmup": "easy"
+      },
+      {
+        "id": "12_2",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B — mantenimiento",
+        "pace": "20 min · ligero",
+        "fuerza": "B"
+      },
+      {
+        "id": "12_3",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo suave 9 km",
+        "pace": "6:00 /km",
+        "warmup": "easy",
+        "bici": "81 min bici llano · ~29 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 13,
+    "dates": "3–9 ago",
+    "phase": 1,
+    "phaseLabel": "Base",
+    "badge": "badge-base",
+    "desc": "Semana 13 — Cierre de la base. Primer contacto con 1000m. Septiembre en vista.",
+    "sessions": [
+      {
+        "id": "13_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "5 × 1000m · desc. 2 min 30s",
+        "pace": "5:00–5:05 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "13_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A",
+        "pace": "35 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "13_2",
+        "day": "Jueves",
+        "type": "fartlek",
+        "name": "Fartlek: 4 min / 2 min × 4",
+        "pace": "Rápido 4:55–5:00 · suave 5:45 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "13_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B",
+        "pace": "35 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "13_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo 14 km progresivo",
+        "pace": "5:45 → 5:15 /km",
+        "warmup": "largo",
+        "bici": "115 min bici llano · ~42 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 14,
+    "dates": "10–16 ago",
+    "phase": 2,
+    "phaseLabel": "Volumen",
+    "badge": "badge-vol",
+    "desc": "Semana 14 — Arranca el volumen. Septiembre — temperatura ya tolerable.",
+    "sessions": [
+      {
+        "id": "14_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "8 × 600m · desc. 75s",
+        "pace": "4:58–5:02 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "14_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A",
+        "pace": "35 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "14_2",
+        "day": "Jueves",
+        "type": "fartlek",
+        "name": "Fartlek: 5 min / 2 min × 4",
+        "pace": "Rápido 4:55 · suave 5:40 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "14_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B",
+        "pace": "35 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "14_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo 14 km suave",
+        "pace": "5:35–5:45 /km",
+        "warmup": "largo",
+        "bici": "119 min bici llano · ~43 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 15,
+    "dates": "17–23 ago",
+    "phase": 2,
+    "phaseLabel": "Volumen",
+    "badge": "badge-vol",
+    "desc": "Semana 15 — Primera sesión con tramos a ritmo objetivo 4:50. El cuerpo aprende el ritmo de carrera.",
+    "sessions": [
+      {
+        "id": "15_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "6 × 1000m · desc. 2 min",
+        "pace": "4:52–4:58 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "15_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A",
+        "pace": "35 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "15_2",
+        "day": "Jueves",
+        "type": "fartlek",
+        "name": "Fartlek: 6 min objetivo / 2 min suave × 3",
+        "pace": "Objetivo: 4:50 /km exacto",
+        "warmup": "quality"
+      },
+      {
+        "id": "15_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B",
+        "pace": "35 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "15_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo 15 km (2 km finales a 4:50)",
+        "pace": "5:35 → 4:50 /km",
+        "warmup": "largo",
+        "bici": "120 min bici llano · ~44 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 16,
+    "dates": "24–30 ago",
+    "phase": 2,
+    "phaseLabel": "TEST 10K",
+    "badge": "badge-vol",
+    "isTest": true,
+    "desc": "⏱️ SEMANA TEST — Control 10K el martes. Mide tu nivel a mitad del plan. El resultado predice el tiempo de media maratón (multiplica por 2.1 aprox). Resto de semana suave.",
+    "sessions": [
+      {
+        "id": "16_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "TEST 10K — esfuerzo máximo",
+        "pace": "Objetivo orientativo: <50 min (implica 4:50 en media posible)",
+        "warmup": "quality"
+      },
+      {
+        "id": "16_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A — ligero",
+        "pace": "25 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "16_2",
+        "day": "Jueves",
+        "type": "rodaje",
+        "name": "Rodaje recuperación 6 km",
+        "pace": "6:00 /km — muy suave",
+        "warmup": "easy"
+      },
+      {
+        "id": "16_3",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo suave 10 km",
+        "pace": "5:50 /km",
+        "warmup": "largo",
+        "bici": "87 min bici llano · ~31 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 17,
+    "dates": "31 ago – 6 sep",
+    "phase": 2,
+    "phaseLabel": "Volumen",
+    "badge": "badge-vol",
+    "desc": "Semana 17 — 1200m por primera vez. Ajusta ritmos según el test 10K.",
+    "sessions": [
+      {
+        "id": "17_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "5 × 1200m · desc. 2 min 30s",
+        "pace": "4:52–4:55 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "17_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A",
+        "pace": "35 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "17_2",
+        "day": "Jueves",
+        "type": "fartlek",
+        "name": "Fartlek: 7 min objetivo / 2 min suave × 3",
+        "pace": "4:50 /km en los bloques rápidos",
+        "warmup": "quality"
+      },
+      {
+        "id": "17_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B",
+        "pace": "35 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "17_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo 15 km (4 km a 4:50)",
+        "pace": "5:30 → 4:50 /km",
+        "warmup": "largo",
+        "bici": "118 min bici llano · ~43 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 18,
+    "dates": "7–13 sep",
+    "phase": 2,
+    "phaseLabel": "Volumen",
+    "badge": "badge-vol",
+    "desc": "Semana 18 — Largo máximo de volumen: 16 km. Dos calidades potentes.",
+    "sessions": [
+      {
+        "id": "18_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "4 × 1600m · desc. 3 min",
+        "pace": "4:50–4:55 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "18_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A",
+        "pace": "35 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "18_2",
+        "day": "Jueves",
+        "type": "fartlek",
+        "name": "Fartlek sueco: 1-2-3-3-2-1 min",
+        "pace": "Rápidos a 4:45–4:50 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "18_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B",
+        "pace": "35 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "18_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo 16 km (6 km a 4:50)",
+        "pace": "5:30 → 4:50 /km",
+        "warmup": "largo",
+        "bici": "124 min bici llano · ~45 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 19,
+    "dates": "14–20 sep",
+    "phase": 2,
+    "phaseLabel": "Descarga",
+    "badge": "badge-vol",
+    "desc": "Semana 19 — DESCARGA real. Cierre del volumen. El cuerpo asimila.",
+    "sessions": [
+      {
+        "id": "19_0",
+        "day": "Martes",
+        "type": "rodaje",
+        "name": "Rodaje suave 6 km",
+        "pace": "5:55 /km",
+        "warmup": "easy"
+      },
+      {
+        "id": "19_1",
+        "day": "Jueves",
+        "type": "rodaje",
+        "name": "Rodaje 6 km + 4 × 1 min a ritmo objetivo",
+        "pace": "4:50 /km en los 4 minutos",
+        "warmup": "easy"
+      },
+      {
+        "id": "19_2",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B — mantenimiento",
+        "pace": "20 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "19_3",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo suave 11 km",
+        "pace": "5:50 /km",
+        "warmup": "largo",
+        "bici": "96 min bici llano · ~35 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 20,
+    "dates": "21–27 sep",
+    "phase": 3,
+    "phaseLabel": "Intensidad",
+    "badge": "badge-int",
+    "desc": "Semana 20 — Empieza la fase clave. 2000m y trabajo específico a 4:50 sostenido.",
+    "sessions": [
+      {
+        "id": "20_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "4 × 2000m · desc. 3 min",
+        "pace": "4:50–4:55 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "20_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A",
+        "pace": "35 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "20_2",
+        "day": "Jueves",
+        "type": "fartlek",
+        "name": "Fartlek: 8 min objetivo / 2 min suave × 3",
+        "pace": "4:50 /km exacto · aprende el ritmo",
+        "warmup": "quality"
+      },
+      {
+        "id": "20_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B",
+        "pace": "35 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "20_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo 15 km (8 km a ritmo objetivo)",
+        "pace": "5:30 → 4:50 /km",
+        "warmup": "largo",
+        "bici": "116 min bici llano · ~42 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 21,
+    "dates": "28 sep – 4 oct",
+    "phase": 3,
+    "phaseLabel": "Intensidad",
+    "badge": "badge-int",
+    "desc": "Semana 21 — 3000m. La pieza más específica del plan. Si aguantas esto a 4:50, la carrera está al alcance.",
+    "sessions": [
+      {
+        "id": "21_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "3 × 3000m · desc. 4 min",
+        "pace": "4:50–4:52 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "21_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A",
+        "pace": "35 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "21_2",
+        "day": "Jueves",
+        "type": "fartlek",
+        "name": "Fartlek: 10 min objetivo / 3 min suave × 2",
+        "pace": "4:50 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "21_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B",
+        "pace": "35 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "21_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo 16 km (10 km a ritmo objetivo)",
+        "pace": "5:30 → 4:50 /km",
+        "warmup": "largo",
+        "bici": "122 min bici llano · ~44 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 22,
+    "dates": "5–11 oct",
+    "phase": 3,
+    "phaseLabel": "TEST 5K-10K",
+    "badge": "badge-int",
+    "isTest": true,
+    "desc": "⏱️ SEMANA TEST — 5K o 10K a tope. Tercer control. Si haces 5K en ~23 min o 10K en ~48 min, la media a 4:50 es realista. Ajusta las últimas semanas según resultado.",
+    "sessions": [
+      {
+        "id": "22_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "TEST 5K o 10K — elige según forma",
+        "pace": "Objetivo: 5K < 23 min · 10K < 48 min",
+        "warmup": "quality"
+      },
+      {
+        "id": "22_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A — ligero",
+        "pace": "25 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "22_2",
+        "day": "Jueves",
+        "type": "rodaje",
+        "name": "Rodaje suave 6 km",
+        "pace": "5:55 /km",
+        "warmup": "easy"
+      },
+      {
+        "id": "22_3",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo suave 11 km",
+        "pace": "5:50 /km",
+        "warmup": "largo",
+        "bici": "96 min bici llano · ~35 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 23,
+    "dates": "12–18 oct",
+    "phase": 3,
+    "phaseLabel": "Intensidad",
+    "badge": "badge-int",
+    "desc": "Semana 23 — Largo máximo del plan: 17 km con 12 a ritmo objetivo. La sesión más exigente.",
+    "sessions": [
+      {
+        "id": "23_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "5 × 1600m · desc. 2 min 30s",
+        "pace": "4:48–4:52 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "23_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A",
+        "pace": "35 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "23_2",
+        "day": "Jueves",
+        "type": "fartlek",
+        "name": "Fartlek: 12 min objetivo / 3 min suave × 2",
+        "pace": "4:50 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "23_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B",
+        "pace": "35 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "23_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo 17 km (12 km a 4:50) — PICO",
+        "pace": "5:20 → 4:50 /km",
+        "warmup": "largo",
+        "bici": "129 min bici llano · ~47 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 24,
+    "dates": "19–25 oct",
+    "phase": 3,
+    "phaseLabel": "Intensidad",
+    "badge": "badge-int",
+    "desc": "Semana 24 — 2x(4×1000m). Velocidad y resistencia simultáneas.",
+    "sessions": [
+      {
+        "id": "24_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "2 × (4 × 1000m) · desc. 90s / 4 min entre bloques",
+        "pace": "4:45–4:50 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "24_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A",
+        "pace": "35 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "24_2",
+        "day": "Jueves",
+        "type": "fartlek",
+        "name": "Fartlek sueco: 1-2-3-3-2-1-2-3 min",
+        "pace": "Rápidos a 4:45 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "24_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B",
+        "pace": "35 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "24_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo 16 km (10 km a 4:50)",
+        "pace": "5:25 → 4:50 /km",
+        "warmup": "largo",
+        "bici": "122 min bici llano · ~44 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 25,
+    "dates": "26 oct – 1 nov",
+    "phase": 3,
+    "phaseLabel": "Descarga",
+    "badge": "badge-int",
+    "desc": "Semana 25 — DESCARGA real. La carga de S23-24 necesita asimilarse. Sin calidad intensa.",
+    "sessions": [
+      {
+        "id": "25_0",
+        "day": "Martes",
+        "type": "rodaje",
+        "name": "Rodaje 7 km + 3 × 1 min a 4:50",
+        "pace": "Activación sin cargar",
+        "warmup": "easy"
+      },
+      {
+        "id": "25_1",
+        "day": "Jueves",
+        "type": "series",
+        "name": "4 × 1000m suave",
+        "pace": "5:00–5:05 /km — sin apretar",
+        "warmup": "quality"
+      },
+      {
+        "id": "25_2",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B — mantenimiento",
+        "pace": "20 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "25_3",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo suave 12 km",
+        "pace": "5:45 /km",
+        "warmup": "largo",
+        "bici": "103 min bici llano · ~37 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 26,
+    "dates": "2–8 nov",
+    "phase": 3,
+    "phaseLabel": "Intensidad",
+    "badge": "badge-int",
+    "desc": "Semana 26 — Última carga intensa, pero moderada. No matar las piernas antes del taper. El plan original pecaba aquí de exceso.",
+    "sessions": [
+      {
+        "id": "26_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "4 × 2000m · desc. 3 min",
+        "pace": "4:50 /km — sin pasarse",
+        "warmup": "quality"
+      },
+      {
+        "id": "26_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A — moderado",
+        "pace": "30 min",
+        "fuerza": "A"
+      },
+      {
+        "id": "26_2",
+        "day": "Jueves",
+        "type": "fartlek",
+        "name": "Fartlek: 8 min objetivo / 2 min suave × 2",
+        "pace": "4:50 /km",
+        "warmup": "quality"
+      },
+      {
+        "id": "26_3",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B — moderado",
+        "pace": "30 min",
+        "fuerza": "B"
+      },
+      {
+        "id": "26_4",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo 14 km (6 km a 4:50)",
+        "pace": "5:30 → 4:50 /km",
+        "warmup": "largo",
+        "bici": "110 min bici llano · ~40 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 27,
+    "dates": "9–15 nov",
+    "phase": 4,
+    "phaseLabel": "Taper",
+    "badge": "badge-taper",
+    "desc": "Semana 27 — Taper semana 1. Volumen al 65%. Mantén un estímulo a ritmo objetivo. Empieza a cuidar el sueño y la nutrición.",
+    "sessions": [
+      {
+        "id": "27_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "4 × 1000m · desc. 2 min",
+        "pace": "4:50 /km — fresco y controlado",
+        "warmup": "quality"
+      },
+      {
+        "id": "27_1",
+        "day": "Miércoles",
+        "type": "fuerza",
+        "name": "Full-body A — mantenimiento",
+        "pace": "20 min · sin agotarse",
+        "fuerza": "A"
+      },
+      {
+        "id": "27_2",
+        "day": "Jueves",
+        "type": "fartlek",
+        "name": "20 min suave + 3 × 3 min a 4:50",
+        "pace": "4:50 /km en los bloques",
+        "warmup": "easy"
+      },
+      {
+        "id": "27_3",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo suave 13 km",
+        "pace": "5:40 /km — sin forzar",
+        "warmup": "largo",
+        "bici": "110 min bici llano · ~40 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 28,
+    "dates": "16–22 nov",
+    "phase": 4,
+    "phaseLabel": "Taper",
+    "badge": "badge-taper",
+    "desc": "Semana 28 — Taper semana 2. Volumen al 45%. Mantén la velocidad, elimina la carga. Prepara la ropa, el dorsal, el avituallamiento.",
+    "sessions": [
+      {
+        "id": "28_0",
+        "day": "Martes",
+        "type": "series",
+        "name": "3 × 1000m · desc. 2 min 30s",
+        "pace": "4:48–4:50 /km — siente el ritmo",
+        "warmup": "quality"
+      },
+      {
+        "id": "28_1",
+        "day": "Jueves",
+        "type": "rodaje",
+        "name": "20 min suave + 4 × 1 min a 4:50",
+        "pace": "Activación neuromuscular",
+        "warmup": "easy"
+      },
+      {
+        "id": "28_2",
+        "day": "Viernes",
+        "type": "fuerza",
+        "name": "Full-body B — muy ligero",
+        "pace": "15 min · solo activar",
+        "fuerza": "B"
+      },
+      {
+        "id": "28_3",
+        "day": "Sábado",
+        "type": "largo",
+        "name": "Largo muy suave 9 km",
+        "pace": "5:55 /km — las piernas descansan",
+        "warmup": "easy",
+        "bici": "79 min bici llano · ~28 km · cadencia 80–85 rpm"
+      }
+    ]
+  },
+  {
+    "n": 29,
+    "dates": "23–29 nov",
+    "phase": 4,
+    "phaseLabel": "CARRERA",
+    "badge": "badge-taper",
+    "isRaceWeek": true,
+    "desc": "🏁 SEMANA DE CARRERA. Descansa, hidrata, come carbohidratos. La forma ya está hecha — el trabajo está hecho. Confía en las 28 semanas.",
+    "sessions": [
+      {
+        "id": "29_0",
+        "day": "Lunes",
+        "type": "rodaje",
+        "name": "15 min activación muy suave",
+        "pace": "6:00 /km — solo mover las piernas",
+        "warmup": "easy"
+      },
+      {
+        "id": "29_1",
+        "day": "Martes",
+        "type": "rest",
+        "name": "Descanso total",
+        "pace": "Come, duerme, relájate"
+      },
+      {
+        "id": "29_2",
+        "day": "Miércoles",
+        "type": "rodaje",
+        "name": "20 min suave + 4 strides de 80m",
+        "pace": "Strides a 4:30 /km · activación neuromuscular"
+      },
+      {
+        "id": "29_3",
+        "day": "Jue–Sáb",
+        "type": "rest",
+        "name": "Descanso total — preparación logística",
+        "pace": "Hidratación, nutrición, revisión de ropa y zapatillas"
+      },
+      {
+        "id": "29_4",
+        "day": "Dom 29 nov",
+        "type": "race",
+        "name": "MEDIA MARATÓN SEVILLA",
+        "pace": "Objetivo: 4:50 /km · Meta: 1h 42' · Sale a 4:55 los primeros 5 km"
+      }
+    ]
+  }
+];
+var PROG = {
+  "0": {
+    "A": [
+      [
+        "Sentadilla búlgara",
+        "2×8",
+        "4 seg bajando. Aprende el patrón de movimiento.",
+        null,
+        "90s"
+      ],
+      [
+        "Flexiones",
+        "2×8",
+        "De rodillas si necesitas. Pecho casi toca el suelo.",
+        null,
+        "75s"
+      ],
+      [
+        "Hip thrust en suelo",
+        "2×12",
+        "Aprieta el glúteo arriba 1 seg.",
+        null,
+        "75s"
+      ],
+      [
+        "Remo con mochila",
+        "2×8",
+        "Codo cerca del cuerpo.",
+        "2–3 kg",
+        "90s"
+      ],
+      [
+        "Zancada con giro",
+        "2×8",
+        "Giro suave hacia pierna delantera.",
+        null,
+        "75s"
+      ],
+      [
+        "Burpee",
+        "2×5",
+        "Sin salto al principio.",
+        null,
+        "90s"
+      ]
+    ],
+    "B": [
+      [
+        "Puente glúteo unilateral",
+        "2×10",
+        "Empieza con dos pies si cuesta.",
+        null,
+        "75s"
+      ],
+      [
+        "Pike push-up",
+        "2×6",
+        "Caderas bien arriba.",
+        null,
+        "75s"
+      ],
+      [
+        "Dead bug",
+        "2×6",
+        "Espalda pegada al suelo todo el tiempo.",
+        null,
+        "60s"
+      ],
+      [
+        "Superman",
+        "2×10",
+        "Sube poco a poco.",
+        null,
+        "60s"
+      ],
+      [
+        "Plancha lateral",
+        "2×20s",
+        "De rodillas si no aguantas.",
+        null,
+        "60s"
+      ],
+      [
+        "Mountain climber",
+        "2×12",
+        "Lento y controlado.",
+        null,
+        "75s"
+      ]
+    ],
+    "C": [
+      [
+        "Sentadilla sumo",
+        "2×10",
+        "Pies anchos apuntando afuera.",
+        null,
+        "90s"
+      ],
+      [
+        "Remo invertido en mesa",
+        "2×6",
+        "Cuerpo recto. Tira del pecho.",
+        null,
+        "90s"
+      ],
+      [
+        "Zancada reversa",
+        "2×8",
+        "Paso atrás controlado.",
+        null,
+        "75s"
+      ],
+      [
+        "Dips en silla",
+        "2×8",
+        "Baja solo lo que puedas.",
+        null,
+        "75s"
+      ],
+      [
+        "Elevación de talones",
+        "2×15",
+        "Sube despacio, baja 3 seg.",
+        null,
+        "60s"
+      ],
+      [
+        "Saltos al cajón",
+        "2×5",
+        "Escalón bajo.",
+        null,
+        "90s"
+      ]
+    ],
+    "D": [
+      [
+        "Sentadilla con salto",
+        "2×6",
+        "Sin salto si cansas.",
+        null,
+        "90s"
+      ],
+      [
+        "Flexiones con pausa",
+        "2×6",
+        "2 seg abajo.",
+        null,
+        "75s"
+      ],
+      [
+        "Step-up a silla",
+        "2×8",
+        "Empuja con el talón de arriba.",
+        null,
+        "75s"
+      ],
+      [
+        "Plancha con toque hombro",
+        "2×8",
+        "Caderas quietas.",
+        null,
+        "60s"
+      ],
+      [
+        "Reverse lunge con rodilla arriba",
+        "2×8",
+        "Equilibrio primero.",
+        null,
+        "75s"
+      ],
+      [
+        "Mountain climber",
+        "2×12",
+        "Lento.",
+        null,
+        "75s"
+      ]
+    ]
+  },
+  "1": {
+    "A": [
+      [
+        "Sentadilla búlgara",
+        "3×10",
+        "3 seg bajando.",
+        "4–6 kg",
+        "90s"
+      ],
+      [
+        "Flexiones",
+        "3×10",
+        "Pecho toca el suelo.",
+        null,
+        "75s"
+      ],
+      [
+        "Hip thrust en suelo",
+        "3×15",
+        "1 seg arriba.",
+        "5–8 kg",
+        "75s"
+      ],
+      [
+        "Remo con mochila",
+        "3×10",
+        "Codo 90° arriba.",
+        "4–6 kg",
+        "90s"
+      ],
+      [
+        "Zancada con giro",
+        "3×10",
+        "Gira hacia pierna delantera.",
+        null,
+        "75s"
+      ],
+      [
+        "Burpee",
+        "3×7",
+        "Con salto al final.",
+        null,
+        "90s"
+      ]
+    ],
+    "B": [
+      [
+        "Puente glúteo unilateral",
+        "3×12",
+        "Una pierna al aire.",
+        null,
+        "75s"
+      ],
+      [
+        "Pike push-up",
+        "3×8",
+        "Cabeza casi al suelo.",
+        null,
+        "75s"
+      ],
+      [
+        "Dead bug",
+        "3×8",
+        "Brazo y pierna opuestos.",
+        null,
+        "60s"
+      ],
+      [
+        "Superman",
+        "3×12",
+        "2 seg arriba.",
+        null,
+        "60s"
+      ],
+      [
+        "Plancha lateral",
+        "3×25s",
+        "Cadera bien arriba.",
+        null,
+        "60s"
+      ],
+      [
+        "Mountain climber",
+        "3×20",
+        "Más ritmo.",
+        null,
+        "75s"
+      ]
+    ],
+    "C": [
+      [
+        "Sentadilla sumo",
+        "3×12",
+        "Muslos paralelos al suelo.",
+        "5–8 kg",
+        "90s"
+      ],
+      [
+        "Remo invertido en mesa",
+        "3×8",
+        "Pecho toca la mesa.",
+        null,
+        "90s"
+      ],
+      [
+        "Zancada reversa",
+        "3×10",
+        "Rodilla casi toca el suelo.",
+        null,
+        "75s"
+      ],
+      [
+        "Dips en silla",
+        "3×10",
+        "Baja hasta 90° de codo.",
+        null,
+        "75s"
+      ],
+      [
+        "Elevación de talones",
+        "3×20",
+        "Carga ligera.",
+        "2–3 kg",
+        "60s"
+      ],
+      [
+        "Saltos al cajón",
+        "3×8",
+        "Aterriza amortiguando.",
+        null,
+        "90s"
+      ]
+    ],
+    "D": [
+      [
+        "Sentadilla con salto",
+        "3×8",
+        "Aterriza suave.",
+        null,
+        "90s"
+      ],
+      [
+        "Flexiones con pausa",
+        "3×8",
+        "2 seg abajo.",
+        null,
+        "75s"
+      ],
+      [
+        "Step-up a silla",
+        "3×10",
+        "Alterna piernas.",
+        null,
+        "75s"
+      ],
+      [
+        "Plancha con toque hombro",
+        "3×10",
+        "Caderas quietas.",
+        null,
+        "60s"
+      ],
+      [
+        "Reverse lunge con rodilla arriba",
+        "3×10",
+        "Equilibra antes de subir rodilla.",
+        null,
+        "75s"
+      ],
+      [
+        "Mountain climber",
+        "3×20",
+        "Más rápido.",
+        null,
+        "75s"
+      ]
+    ]
+  },
+  "2": {
+    "A": [
+      [
+        "Sentadilla búlgara",
+        "3×12",
+        "3 seg bajando.",
+        "8–12 kg",
+        "2 min"
+      ],
+      [
+        "Flexiones",
+        "3×12",
+        "Pausa 1 seg abajo.",
+        null,
+        "75s"
+      ],
+      [
+        "Hip thrust en suelo",
+        "3×15",
+        "2 seg arriba.",
+        "10–15 kg",
+        "2 min"
+      ],
+      [
+        "Remo con mochila",
+        "3×12",
+        "Codo sube sobre el torso.",
+        "8–10 kg",
+        "2 min"
+      ],
+      [
+        "Zancada con giro",
+        "3×12",
+        "Giro amplio.",
+        null,
+        "75s"
+      ],
+      [
+        "Burpee",
+        "3×8",
+        "Salto con brazos arriba.",
+        null,
+        "90s"
+      ]
+    ],
+    "B": [
+      [
+        "Puente glúteo unilateral",
+        "3×15",
+        "Pierna contraria extendida.",
+        null,
+        "75s"
+      ],
+      [
+        "Pike push-up",
+        "3×10",
+        "Cabeza al suelo.",
+        null,
+        "75s"
+      ],
+      [
+        "Dead bug",
+        "3×10",
+        "Sin despegar la espalda.",
+        null,
+        "60s"
+      ],
+      [
+        "Superman",
+        "3×15",
+        "2 seg arriba.",
+        null,
+        "60s"
+      ],
+      [
+        "Plancha lateral",
+        "3×35s",
+        "Toque de cadera si puedes.",
+        null,
+        "75s"
+      ],
+      [
+        "Mountain climber",
+        "3×25",
+        "Ritmo sostenido.",
+        null,
+        "75s"
+      ]
+    ],
+    "C": [
+      [
+        "Sentadilla sumo",
+        "3×15",
+        "Profundidad máxima.",
+        "10–15 kg",
+        "2 min"
+      ],
+      [
+        "Remo invertido en mesa",
+        "3×10",
+        "1 seg arriba.",
+        null,
+        "90s"
+      ],
+      [
+        "Zancada reversa",
+        "3×12",
+        "Paso largo.",
+        "5–8 kg",
+        "90s"
+      ],
+      [
+        "Dips en silla",
+        "3×12",
+        "1 seg abajo.",
+        null,
+        "75s"
+      ],
+      [
+        "Elevación de talones",
+        "3×25",
+        "Bajada 4 seg.",
+        "5–8 kg",
+        "75s"
+      ],
+      [
+        "Saltos al cajón",
+        "3×10",
+        "Escalón más alto.",
+        null,
+        "90s"
+      ]
+    ],
+    "D": [
+      [
+        "Sentadilla con salto",
+        "3×10",
+        "Sin pausa entre reps.",
+        null,
+        "90s"
+      ],
+      [
+        "Flexiones con pausa",
+        "3×10",
+        "3 seg abajo.",
+        null,
+        "75s"
+      ],
+      [
+        "Step-up a silla",
+        "3×12",
+        "Mochila ligera.",
+        "4–6 kg",
+        "90s"
+      ],
+      [
+        "Plancha con toque hombro",
+        "3×12",
+        "Más rápido.",
+        null,
+        "60s"
+      ],
+      [
+        "Reverse lunge con rodilla arriba",
+        "3×12",
+        "Rodilla hasta la cadera.",
+        null,
+        "75s"
+      ],
+      [
+        "Mountain climber",
+        "3×25",
+        "Sprint los últimos.",
+        null,
+        "75s"
+      ]
+    ]
+  },
+  "3": {
+    "A": [
+      [
+        "Sentadilla búlgara",
+        "4×10",
+        "3 seg bajando. Carga máxima tolerable.",
+        "15–20 kg",
+        "2 min"
+      ],
+      [
+        "Flexiones",
+        "4×12",
+        "2 seg abajo. Pies elevados si puedes.",
+        null,
+        "90s"
+      ],
+      [
+        "Hip thrust en suelo",
+        "4×15",
+        "2 seg arriba.",
+        "18–25 kg",
+        "2 min"
+      ],
+      [
+        "Remo con mochila",
+        "4×12",
+        "Codo bien arriba.",
+        "12–15 kg",
+        "2 min"
+      ],
+      [
+        "Zancada con giro",
+        "3×12",
+        "Giro explosivo.",
+        null,
+        "90s"
+      ],
+      [
+        "Burpee",
+        "4×10",
+        "Máximo ritmo.",
+        null,
+        "90s"
+      ]
+    ],
+    "B": [
+      [
+        "Puente glúteo unilateral",
+        "4×15",
+        "2 seg arriba.",
+        null,
+        "90s"
+      ],
+      [
+        "Pike push-up",
+        "3×12",
+        "1 seg abajo.",
+        null,
+        "75s"
+      ],
+      [
+        "Dead bug",
+        "3×10",
+        "Sin despegar espalda.",
+        null,
+        "60s"
+      ],
+      [
+        "Superman",
+        "3×15",
+        "3 seg arriba.",
+        null,
+        "60s"
+      ],
+      [
+        "Plancha lateral",
+        "3×40s",
+        "Eleva pierna si puedes.",
+        null,
+        "75s"
+      ],
+      [
+        "Mountain climber",
+        "4×25",
+        "Sprint. Rodillas al pecho.",
+        null,
+        "90s"
+      ]
+    ],
+    "C": [
+      [
+        "Sentadilla sumo",
+        "4×15",
+        "Profundidad completa.",
+        "18–22 kg",
+        "2 min"
+      ],
+      [
+        "Remo invertido en mesa",
+        "4×10",
+        "2 seg arriba. Pies elevados.",
+        null,
+        "90s"
+      ],
+      [
+        "Zancada reversa",
+        "4×12",
+        "Carga máxima.",
+        "10–12 kg",
+        "2 min"
+      ],
+      [
+        "Dips en silla",
+        "4×12",
+        "2 seg abajo.",
+        null,
+        "90s"
+      ],
+      [
+        "Elevación de talones",
+        "4×25",
+        "Bajada 4 seg.",
+        "10–12 kg",
+        "90s"
+      ],
+      [
+        "Saltos al cajón",
+        "4×10",
+        "Máxima explosividad.",
+        null,
+        "2 min"
+      ]
+    ],
+    "D": [
+      [
+        "Sentadilla con salto",
+        "4×12",
+        "Máxima altura.",
+        null,
+        "2 min"
+      ],
+      [
+        "Flexiones con pausa",
+        "4×10",
+        "3 seg abajo. Pies elevados.",
+        null,
+        "90s"
+      ],
+      [
+        "Step-up a silla",
+        "4×12",
+        "Explosivo subiendo.",
+        "8–10 kg",
+        "2 min"
+      ],
+      [
+        "Plancha con toque hombro",
+        "4×12",
+        "Máximo ritmo.",
+        null,
+        "75s"
+      ],
+      [
+        "Reverse lunge con rodilla arriba",
+        "4×12",
+        "Explosivo.",
+        null,
+        "90s"
+      ],
+      [
+        "Mountain climber",
+        "4×30",
+        "Sprint total.",
+        null,
+        "90s"
+      ]
+    ]
+  },
+  "4": {
+    "A": [
+      [
+        "Sentadilla búlgara",
+        "2×8",
+        "Mantenimiento. Sin cargar.",
+        null,
+        "90s"
+      ],
+      [
+        "Flexiones",
+        "2×10",
+        "Cómodo.",
+        null,
+        "75s"
+      ],
+      [
+        "Hip thrust en suelo",
+        "2×12",
+        "Solo activar.",
+        null,
+        "75s"
+      ],
+      [
+        "Remo con mochila",
+        "2×8",
+        "Carga ligera.",
+        "3–4 kg",
+        "90s"
+      ],
+      [
+        "Zancada con giro",
+        "2×8",
+        "Suave.",
+        null,
+        "75s"
+      ],
+      [
+        "Burpee",
+        "2×5",
+        "Tranquilo.",
+        null,
+        "90s"
+      ]
+    ],
+    "B": [
+      [
+        "Puente glúteo unilateral",
+        "2×10",
+        "Sin forzar.",
+        null,
+        "75s"
+      ],
+      [
+        "Pike push-up",
+        "2×8",
+        "Suave.",
+        null,
+        "75s"
+      ],
+      [
+        "Dead bug",
+        "2×8",
+        "Activar core.",
+        null,
+        "60s"
+      ],
+      [
+        "Superman",
+        "2×10",
+        "Suave.",
+        null,
+        "60s"
+      ],
+      [
+        "Plancha lateral",
+        "2×25s",
+        "Sin forzar.",
+        null,
+        "60s"
+      ],
+      [
+        "Mountain climber",
+        "2×15",
+        "Lento. La fuerza ya está hecha.",
+        null,
+        "75s"
+      ]
+    ],
+    "C": [
+      [
+        "Sentadilla sumo",
+        "2×10",
+        "Sin carga.",
+        null,
+        "90s"
+      ],
+      [
+        "Remo invertido en mesa",
+        "2×8",
+        "Suave.",
+        null,
+        "90s"
+      ],
+      [
+        "Zancada reversa",
+        "2×8",
+        "Movilidad.",
+        null,
+        "75s"
+      ],
+      [
+        "Dips en silla",
+        "2×8",
+        "Sin forzar.",
+        null,
+        "75s"
+      ],
+      [
+        "Elevación de talones",
+        "2×15",
+        "Activar gemelos.",
+        null,
+        "60s"
+      ],
+      [
+        "Saltos al cajón",
+        "2×5",
+        "Solo explosividad.",
+        null,
+        "90s"
+      ]
+    ],
+    "D": [
+      [
+        "Sentadilla con salto",
+        "2×6",
+        "Suave.",
+        null,
+        "90s"
+      ],
+      [
+        "Flexiones con pausa",
+        "2×6",
+        "Tranquilo.",
+        null,
+        "75s"
+      ],
+      [
+        "Step-up a silla",
+        "2×8",
+        "Activación.",
+        null,
+        "75s"
+      ],
+      [
+        "Plancha con toque hombro",
+        "2×8",
+        "Lento.",
+        null,
+        "60s"
+      ],
+      [
+        "Reverse lunge con rodilla arriba",
+        "2×8",
+        "Movilidad suave.",
+        null,
+        "75s"
+      ],
+      [
+        "Mountain climber",
+        "2×15",
+        "Llegamos frescos.",
+        null,
+        "75s"
+      ]
+    ]
+  }
+};
+var PHASE_FLABEL = {
+  "0": "Adaptación — aprende los movimientos · 2 series",
+  "1": "Base — consolida el patrón · 3 series",
+  "2": "Volumen — añade carga · 3 series",
+  "3": "Intensidad — máxima exigencia · 3-4 series",
+  "4": "Taper — solo mantenimiento · 2 series"
+};
+var LOCKED = {"1_0": "done", "1_1": "done"};
+
 // Style mascots — traditional pair + neon pair
 var DECO = {
   trad: {
@@ -542,11 +2890,11 @@ var DECO = {
     shojiR: "<svg viewBox=\"0 0 300 900\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"none\" style=\"position:absolute;inset:0;width:100%;height:100%\">\n  <defs>\n    <linearGradient id=\"neon-bg-r\" x1=\"1\" x2=\"0\" y1=\"0\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#1a0a3a\"/>\n      <stop offset=\"100%\" stop-color=\"#0a0420\"/>\n    </linearGradient>\n    <filter id=\"neon-r-glow\"><feGaussianBlur stdDeviation=\"2.5\" result=\"b\"/><feMerge><feMergeNode in=\"b\"/><feMergeNode in=\"SourceGraphic\"/></feMerge></filter>\n  </defs>\n  <rect width=\"300\" height=\"900\" fill=\"url(#neon-bg-r)\"/>\n  <g opacity=\"0.4\" stroke=\"#ff2a8a\" stroke-width=\"0.5\">\n    <line x1=\"0\" y1=\"700\" x2=\"300\" y2=\"700\"/>\n    <line x1=\"0\" y1=\"750\" x2=\"300\" y2=\"750\"/>\n    <line x1=\"0\" y1=\"800\" x2=\"300\" y2=\"800\"/>\n    <line x1=\"0\" y1=\"850\" x2=\"300\" y2=\"850\"/>\n  </g>\n  <g filter=\"url(#neon-r-glow)\">\n    <rect x=\"278\" y=\"0\" width=\"22\" height=\"900\" fill=\"none\" stroke=\"#ff2a8a\" stroke-width=\"2\"/>\n    <rect x=\"0\" y=\"0\" width=\"300\" height=\"22\" fill=\"none\" stroke=\"#ff2a8a\" stroke-width=\"2\"/>\n    <rect x=\"0\" y=\"878\" width=\"300\" height=\"22\" fill=\"none\" stroke=\"#ff2a8a\" stroke-width=\"2\"/>\n    <line x1=\"0\" y1=\"225\" x2=\"278\" y2=\"225\" stroke=\"#a040ff\" stroke-width=\"2\"/>\n    <line x1=\"0\" y1=\"460\" x2=\"278\" y2=\"460\" stroke=\"#a040ff\" stroke-width=\"2\"/>\n    <line x1=\"0\" y1=\"695\" x2=\"278\" y2=\"695\" stroke=\"#a040ff\" stroke-width=\"2\"/>\n    <line x1=\"140\" y1=\"22\" x2=\"140\" y2=\"878\" stroke=\"#a040ff\" stroke-width=\"2\"/>\n  </g>\n  <text x=\"80\" y=\"135\" font-family=\"serif\" font-size=\"64\" fill=\"#00f0ff\" text-anchor=\"middle\" filter=\"url(#neon-r-glow)\">勝</text>\n  <text x=\"80\" y=\"210\" font-family=\"serif\" font-size=\"64\" fill=\"#00f0ff\" text-anchor=\"middle\" filter=\"url(#neon-r-glow)\">利</text>\n  <text x=\"210\" y=\"450\" font-family=\"serif\" font-size=\"160\" fill=\"#ff2a8a\" opacity=\"0.35\" text-anchor=\"middle\" filter=\"url(#neon-r-glow)\">武</text>\n  <text x=\"80\" y=\"760\" font-family=\"serif\" font-size=\"50\" fill=\"#fff000\" text-anchor=\"middle\" filter=\"url(#neon-r-glow)\">忍</text>\n  <text x=\"80\" y=\"820\" font-family=\"serif\" font-size=\"50\" fill=\"#fff000\" text-anchor=\"middle\" filter=\"url(#neon-r-glow)\">耐</text>\n  <rect x=\"0\" y=\"0\" width=\"10\" height=\"900\" fill=\"#ff2a8a\" opacity=\"0.6\" filter=\"url(#neon-r-glow)\"/>\n</svg>"
   }
 };
- 
+
 var SK="sev29alt1";var KMK="sev29alt1_km";
 var state={};var kmState={};
 var curW=1;var curP=0;
- 
+
 // Style selector: odd weeks = trad, even = neon
 function styleFor(n){return n%2===1?"trad":"neon";}
 function applyTheme(n){
@@ -572,35 +2920,39 @@ function applyTheme(n){
   document.getElementById("doorL").innerHTML=DECO[s].shojiL;
   document.getElementById("doorR").innerHTML=DECO[s].shojiR;
 }
- 
+
 function calcCurrentWeek(){
   var start=new Date(2026,4,11);
   var today=new Date();today.setHours(0,0,0,0);
   var days=Math.floor((today-start)/(1000*60*60*24));
   return Math.min(Math.max(1,Math.floor(days/7)+1),29);
 }
+var KM_LOCKED = {"1_1": {"km": 18.3, "mode": "bici"}};
 function load(){
   try{state=JSON.parse(localStorage.getItem(SK))||{};}catch(e){state={};}
   try{kmState=JSON.parse(localStorage.getItem(KMK))||{};}catch(e){kmState={};}
+  // Merge locked state — immutable
   Object.keys(LOCKED).forEach(function(k){state[k]=LOCKED[k];});
+  // Merge locked km — immutable
+  Object.keys(KM_LOCKED).forEach(function(k){kmState[k]=KM_LOCKED[k];});
 }
 function save(){try{localStorage.setItem(SK,JSON.stringify(state));}catch(e){}}
 function saveKm(){try{localStorage.setItem(KMK,JSON.stringify(kmState));}catch(e){}}
- 
+
 var WU={
   quality:{label:"Calentamiento · 12-15 min",steps:["Trote suave 5 min a 6:00-6:10 /km","Circulos de cadera x10, rodillas al pecho x10, talones al gluteo x10","Drills: skipping bajo 20m, skipping alto 20m, talones 20m, zancadas laterales 20m","3-4 strides 80m: arranca suave, sube al ritmo de serie en los ultimos 30m"]},
   easy:{label:"Calentamiento suave · 5 min",steps:["Primeros 5 min del rodaje a ritmo muy suave (6:00-6:10 /km)","Si llevas frio: circulos de tobillo x5 y sentadilla profunda x5 antes de salir"]},
   largo:{label:"Calentamiento largo · 8-10 min",steps:["Trote suave 5 min a 6:00 /km","Balanceos de pierna frontal y lateral x10, lunges caminando x10","2 strides de 60m al ritmo al que terminaras el tramo final"]}
 };
 var CD={label:"Vuelta a la calma · 10 min",steps:["Trote muy suave 3-4 min al acabar la ultima serie","Estiramientos estaticos: cuadriceps, isquios, gemelos, psoas — 30 seg","Rodillo de foam si tienes: 2 min por pierna en gemelos y banda IT"]};
- 
+
 var FNAMES={A:["Sentadilla bulgara","Flexiones","Hip thrust en suelo","Remo con mochila","Zancada con giro","Burpee"],B:["Puente gluteo unilateral","Pike push-up","Dead bug","Superman","Plancha lateral","Mountain climber"],C:["Sentadilla sumo","Remo invertido en mesa","Zancada reversa","Dips en silla","Elevacion de talones","Saltos al cajon"],D:["Sentadilla con salto","Flexiones con pausa","Step-up a silla","Plancha con toque hombro","Reverse lunge con rodilla arriba","Mountain climber"]};
 var FNAMES_REAL={A:["Sentadilla búlgara","Flexiones","Hip thrust en suelo","Remo con mochila","Zancada con giro","Burpee"],B:["Puente glúteo unilateral","Pike push-up","Dead bug","Superman","Plancha lateral","Mountain climber"],C:["Sentadilla sumo","Remo invertido en mesa","Zancada reversa","Dips en silla","Elevación de talones","Saltos al cajón"],D:["Sentadilla con salto","Flexiones con pausa","Step-up a silla","Plancha con toque hombro","Reverse lunge con rodilla arriba","Mountain climber"]};
 var FLABELS={A:"Bloque A — Empuje + pierna",B:"Bloque B — Core + estabilidad",C:"Bloque C — Sentadilla + tirón",D:"Bloque D — HIIT funcional"};
 var PHASES=[{id:0,name:"I · Adaptación",weeks:[1,2,3,4,5,6]},{id:1,name:"II · Base",weeks:[7,8,9,10,11,12,13]},{id:2,name:"III · Volumen",weeks:[14,15,16,17,18,19]},{id:3,name:"IV · Intensidad",weeks:[20,21,22,23,24,25,26]},{id:4,name:"V · Taper",weeks:[27,28,29]}];
 var dotMap={series:"d-series",fartlek:"d-fartlek",rodaje:"d-rodaje",largo:"d-largo",rest:"d-rest",race:"d-race",fuerza:"d-fuerza"};
 var JP_NUMS=["一","二","三","四","五","六","七","八","九","十","十一","十二","十三","十四","十五","十六","十七","十八","十九","二十","二十一","二十二","二十三","二十四","二十五","二十六","二十七","二十八","二十九"];
- 
+
 function phaseOf(n){if(n<=6)return 0;if(n<=13)return 1;if(n<=19)return 2;if(n<=26)return 3;return 4;}
 function fBlock(f,wn){var pair=Math.floor((wn-1)/2)%2;return f==="A"?(pair===0?"A":"C"):(pair===0?"B":"D");}
 function valid(w){return w.sessions.filter(function(s){return s.type!=="rest";});}
@@ -609,7 +2961,7 @@ function skippedCount(w){return valid(w).filter(function(s){return state[s.id]==
 function totalValid(){return WEEKS.reduce(function(a,w){return a+valid(w).length;},0);}
 function totalCompleted(){return WEEKS.reduce(function(a,w){return a+completedCount(w);},0);}
 function totalSkipped(){return WEEKS.reduce(function(a,w){return a+skippedCount(w);},0);}
- 
+
 function updateGlobalProg(){
   var tot=totalValid(),done=totalCompleted(),skip=totalSkipped();
   var pD=tot>0?Math.round(done/tot*100):0;
@@ -619,7 +2971,7 @@ function updateGlobalProg(){
   document.getElementById("pPctG").textContent=pD+"% done";
   document.getElementById("pPctR").textContent=pS+"% skip";
 }
- 
+
 function updateKmTotals(){
   var run=0,bici=0;
   Object.keys(kmState).forEach(function(k){
@@ -646,7 +2998,7 @@ function toggleKmMode(sessId,mode){
   if(mode==="run"){runBtn.classList.add("on");runBtn.classList.remove("bici");biciBtn.classList.remove("on");biciBtn.classList.remove("bici");}
   else{biciBtn.classList.add("on");biciBtn.classList.add("bici");runBtn.classList.remove("on");runBtn.classList.remove("bici");}
 }
- 
+
 function buildPhNav(){
   var h="";PHASES.forEach(function(p){h+='<button class="ph-btn'+(p.id===curP?" on":"")+'" onclick="selPhase('+p.id+')">'+p.name+'</button>';});
   document.getElementById("phNav").innerHTML=h;
@@ -658,11 +3010,12 @@ function buildWkNav(){
     var dc=(d===v&&v>0)?" all-done":(d>0||sk>0?" partial":"");
     var isCur=(n===cw)?" current-week":"";
     var styleCls=" style-"+styleFor(n);
-    h+='<button class="wk-btn'+(n===curW?" on":"")+dc+isCur+styleCls+'" onclick="selWeek('+n+')">'+n+'</button>';
+    var isTest=WEEKS[n-1]&&WEEKS[n-1].isTest?" wk-test":"";
+    h+='<button class="wk-btn'+(n===curW?" on":"")+dc+isCur+styleCls+isTest+'" onclick="selWeek('+n+')" title="'+(WEEKS[n-1].isTest?"SEMANA TEST ⏱":"")+'">'+n+(WEEKS[n-1].isTest?'<span class="test-dot"></span>':'')+'</button>';
   });
   document.getElementById("wkNav").innerHTML=h;
 }
- 
+
 function expandBlock(wu,bici){
   var out="";
   if(bici){out+='<div class="exp-block bici-b"><div class="exp-hdr bici-c" onclick="toggleExp(this)"><span class="exp-arr">&#9658;</span> 自転車 · Bici alternativa</div><div class="exp-body"><div style="font-size:13px;color:var(--ink);line-height:1.6">'+bici+'</div></div></div>';}
@@ -675,7 +3028,7 @@ function expandBlock(wu,bici){
   }
   return out?'<div class="expand">'+out+'</div>':"";
 }
- 
+
 function fuerzaBlock(f,wn){
   if(!f)return"";
   var key=fBlock(f,wn);var ph=phaseOf(wn);
@@ -695,7 +3048,7 @@ function fuerzaBlock(f,wn){
   }).join("");
   return '<div class="expand"><div class="exp-block cool-b"><div class="exp-hdr cool-c" onclick="toggleExp(this)"><span class="exp-arr">&#9658;</span> 鍛錬 · '+label+'</div><div class="exp-body" data-row="1"><div class="prog-phase-lbl">'+phLabel+'</div><div class="fgrid">'+items+'</div></div></div></div>';
 }
- 
+
 function sessHTML(s,wn){
   var st=state[s.id];
   var isDone=st==="done";var isSkip=st==="skip";
@@ -711,21 +3064,26 @@ function sessHTML(s,wn){
   var trackable=(s.type==="rodaje"||s.type==="series"||s.type==="fartlek"||s.type==="largo"||s.type==="race");
   if(trackable&&!isRest){
     var saved=kmState[s.id]||{km:"",mode:"run"};
-    kmTrack='<div class="km-track">'+
-      '<span class="km-track-lbl">⚡ Tus km reales:</span>'+
-      '<div class="km-mode">'+
-        '<button class="km-mode-btn'+(saved.mode!=="bici"?" on":"")+'" data-sess="'+s.id+'" data-mode="run" onclick="toggleKmMode(\''+s.id+'\',\'run\')">🏃 Run</button>'+
-        '<button class="km-mode-btn'+(saved.mode==="bici"?" on bici":"")+'" data-sess="'+s.id+'" data-mode="bici" onclick="toggleKmMode(\''+s.id+'\',\'bici\')">🚴 Bici</button>'+
-      '</div>'+
-      '<input type="number" step="0.1" min="0" max="50" class="km-input" id="km-inp-'+s.id+'" value="'+(saved.km||"")+'" placeholder="0.0">'+
-      '<span class="km-unit">km</span>'+
-      '<button class="km-save" onclick="saveKmEntry(\''+s.id+'\')">Save</button>'+
-      '</div>';
+    var kmLocked=!!KM_LOCKED[s.id];
+    var kmDisabled=kmLocked?' disabled':'';
+    var saveBtn=kmLocked
+      ? '<button class="km-save" disabled style="opacity:.4;cursor:not-allowed">Fijado</button>'
+      : '<button class="km-save" onclick="saveKmEntry(\''+s.id+'\')">Guardar</button>';
+    kmTrack='<div class="km-track">'
+      +'<span class="km-track-lbl">Tus km reales:</span>'
+      +'<div class="km-mode">'
+        +'<button class="km-mode-btn'+(saved.mode!=="bici"?" on":"")+'" data-sess="'+s.id+'" data-mode="run" onclick="toggleKmMode(\''+s.id+'\',\'run\')">Run</button>'
+        +'<button class="km-mode-btn'+(saved.mode==="bici"?" on bici":"")+'" data-sess="'+s.id+'" data-mode="bici" onclick="toggleKmMode(\''+s.id+'\',\'bici\')">Bici</button>'
+      +'</div>'
+      +'<input type="number" step="0.1" min="0" max="50" class="km-input" id="km-inp-'+s.id+'" value="'+(saved.km||"")+'" placeholder="0.0"'+kmDisabled+'>'
+      +'<span class="km-unit">km</span>'
+      +saveBtn
+      +'</div>';
   }
   var inner=s.fuerza?fuerzaBlock(s.fuerza,wn):expandBlock(s.warmup,s.bici);
   return '<div class="'+cls+'" id="card-'+s.id+'"><div class="sess-top"><div class="dot '+(dotMap[s.type]||"d-rest")+'"></div><div class="sess-day">'+s.day+'</div><div class="sess-info"><div class="sess-name">'+s.name+'</div><div class="sess-pace">'+s.pace+'</div></div>'+chks+'</div>'+kmTrack+inner+'</div>';
 }
- 
+
 function renderWeek(){
   var w=WEEKS[curW-1];
   applyTheme(curW);
@@ -739,11 +3097,11 @@ function renderWeek(){
   var s=styleFor(w.n);
   var deco=DECO[s];
   var h="";
- 
+
   if(w.isRaceWeek){
     h+='<div class="race-banner"><div class="race-banner-deco">'+deco.samurai+'</div><div class="race-ttl">MEDIA MARATÓN SEVILLA</div><span class="race-jp">武者の道 · 二〇二六年</span><div class="race-goal">4:50 /km · ~1h 42\'</div><div class="race-sub">Domingo 29 de noviembre 2026</div></div>';
   }
- 
+
   var mascot = "";
   if(allDone){mascot = '<div class="wk-mascot">'+deco.daruma+'</div>';}
   else if(w.isRaceWeek){mascot = '<div class="wk-mascot">'+deco.kabuto+'</div>';}
@@ -751,9 +3109,9 @@ function renderWeek(){
   else if(w.phase===0){mascot = '<div class="wk-mascot">'+deco.torii+'</div>';}
   else if(w.phase===3){mascot = '<div class="wk-mascot">'+deco.samurai+'</div>';}
   else {mascot = '<div class="wk-mascot">'+deco.kabuto+'</div>';}
- 
+
   var styleBadge = '<span class="style-badge '+s+'">'+(s==="trad"?"伝統 TRADICIONAL":"ネオン NEÓN")+'</span>';
- 
+
   h+='<div class="wk-hdr"><div class="wk-title-block">'+mascot+'<div class="wk-title-info">'+styleBadge+'<span class="wk-num-jp">第'+jpN+'週 · Semana '+w.n+'</span><div class="wk-num-kanji"><span class="w-num">'+w.n+'</span></div><div class="wk-dates-txt">'+w.dates+' 2026</div><div class="wk-desc">'+w.desc+'</div></div></div><span class="badge '+w.badge+'">'+w.phaseLabel+'</span></div>';
   h+='<div class="wk-stats"><div class="stat"><div class="stat-lbl">Sesiones</div><div class="stat-val">'+tot+'<span class="stat-unit"> activas</span></div></div><div class="stat green-stat"><div class="stat-lbl">Completado</div><div class="stat-val">'+pD+'%</div></div><div class="stat red-stat"><div class="stat-lbl">Perdido</div><div class="stat-val">'+pS+'%</div></div><div class="stat"><div class="stat-lbl">Km aprox.</div><div class="stat-val">'+km+'<span class="stat-unit"> km</span></div></div></div>';
   h+='<div class="wk-prog"><span class="wk-prog-lbl g">'+pD+'%</span><div class="wk-prog-bar"><div class="wk-prog-fill-g" style="width:'+pD+'%"></div></div><div class="wk-prog-bar"><div class="wk-prog-fill-r" style="width:'+pS+'%"></div></div><span class="wk-prog-lbl r">'+pS+'%</span></div>';
@@ -764,7 +3122,7 @@ function renderWeek(){
   document.getElementById("main").innerHTML=h;
   updateGlobalProg();buildWkNav();
 }
- 
+
 function selPhase(id){curP=id;curW=PHASES[id].weeks[0];buildPhNav();buildWkNav();renderWeek();}
 function selWeek(n){curW=n;buildWkNav();renderWeek();}
 function adjWeek(dir){
@@ -872,7 +3230,7 @@ function showToast(msg){
     }
   },{passive:true});
 })();
- 
+
 load();
 var cw=calcCurrentWeek();curP=phaseOf(cw);curW=cw;
 buildPhNav();buildWkNav();renderWeek();updateKmTotals();
